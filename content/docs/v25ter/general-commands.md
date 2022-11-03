@@ -3,9 +3,7 @@ title: General Commands
 weight: 1
 ---
 
-Reference: [V.25ter](https://www.itu.int/rec/T-REC-V.25ter/en)
-
-Maximum Response Time: 300ms
+{{< hint info >}}Maximum Response Time: 300ms{{</ hint >}}
 
 ## ATI (Display Product Identification Information) {#ati}
 
@@ -417,7 +415,7 @@ and whether or not engaged tone (busy signal) detection is enabled.
   ,4,"**CONNECT\<text>** result code returned.\nDial tone and busy detection are both enabled"
   ```
 
-## Table 3: ATV0 & ATV1 Result Codes Numeric Equivalents and Brief Description {#table-3}
+## Table: ATV0 & ATV1 Result Codes Numeric Equivalents and Brief Description {#table-3}
 
 ```csv
 ATV1,ATV0,Description

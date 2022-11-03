@@ -1,6 +1,6 @@
 ---
-title: Quectel Specific
-weight: 900
+title: General Commands
+weight: 1
 ---
 
 ## AT+QURCCFG (Configure URC Indication Option)
@@ -21,6 +21,8 @@ The command is used to configure the output port of URC.
 
   If the configuration parameter `<urcportvalue>` is omitted, return current configuration:
 
+  Resposne:
+
   ```at
   +QURCCFG: "urcport",<urcportvalue>
 
@@ -29,10 +31,7 @@ The command is used to configure the output port of URC.
 
   If the configuration parameter `<urcportvalue>` is not omitted, response:
 
-  ```at
-  OK
-  ERROR
-  ```
+  Resposne: `OK` or `ERROR`
 
 Parameter:
 

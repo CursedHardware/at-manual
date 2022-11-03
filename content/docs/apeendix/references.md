@@ -8,9 +8,9 @@ bookToC: false
 
 ```csv
 Document Name,Remark
-V.25ter,Serial asynchronous automatic dialing and control
-3GPP TS 27.005,"Digital cellular telecommunications (Phase 2+);\nUMTS; LTE; Use of DTE-DCE interface for SMS and CBS"
-3GPP TS 27.007,"Digital cellular telecommunications (Phase 2+);\nUMTS; LTE; AT command set for UE"
+[V.25ter](https://www.itu.int/rec/T-REC-V.25ter/en),Serial asynchronous automatic dialing and control
+[3GPP TS 27.005](https://www.3gpp.org/DynaReport/27005.htm),"Digital cellular telecommunications (Phase 2+);\nUMTS; LTE; Use of DTE-DCE interface for SMS and CBS"
+[3GPP TS 27.007](https://www.3gpp.org/DynaReport/27007.htm),"Digital cellular telecommunications (Phase 2+);\nUMTS; LTE; AT command set for UE"
 ```
 
 ## Terms and Abbreviations {#terms}

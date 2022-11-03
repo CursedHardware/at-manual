@@ -1,9 +1,7 @@
 ---
-title: 3GPP TS 27.007
-weight: 3
+title: General Commands
+weight: 1
 ---
-
-<https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1515>
 
 ## AT+CFUN (Set Phone Functionality) {#at-cfun}
 

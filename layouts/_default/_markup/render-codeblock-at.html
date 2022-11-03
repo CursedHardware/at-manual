@@ -12,7 +12,7 @@
 {{- else if in $command "ERROR" }}
 <b class="error">{{ $command }}</b>
 {{- else if or (hasPrefix . "+") (hasPrefix . "^") }}
-<b class="info">{{ $command }}</b>
+<b>{{ $command }}</b>
 {{- else }}
 {{ . }}
 {{- end }}

@@ -17,7 +17,7 @@ Commands are usually followed by a response that includes `<CR><LF><response><CR
 
 Throughout this document, only the responses are presented, `<CR><LF>` are omitted intentionally.
 
-- [ITU-T V.25ter]({{< ref "general-commands" >}})
+- ITU-T V.25ter
 - 3GPP TS 27.005
 - 3GPP TS 27.007
 
