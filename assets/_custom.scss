@@ -1,0 +1,20 @@
+table {
+  code {
+    white-space: nowrap;
+  }
+}
+
+.language-at-command {
+  .command {
+    color: blue;
+  }
+  .ok {
+    color: green;
+  }
+  .error {
+    color: red;
+  }
+  .info {
+    color: #209cee;
+  }
+}

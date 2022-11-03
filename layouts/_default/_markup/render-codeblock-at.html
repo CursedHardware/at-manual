@@ -1,0 +1,20 @@
+<pre class="language-at-command" data-lang="at-command">
+{{- range split .Inner "\n" }}
+{{- $parts := split . "// " }}
+{{- $command := trim (index $parts 0) " " }}
+{{- $comment := trim (index $parts 1) " " }}
+{{- if or (hasPrefix $command "AT") (eq $command "A/") }}
+<b class="command">{{ $command }}</b>
+{{- else if or (eq $command "OK") (eq $command "0") }}
+<i class="ok">{{ $command }}</i>
+{{- else if hasPrefix $command "\x3C" }}
+<b>{{ $command }}</b>
+{{- else if in $command "ERROR" }}
+<b class="error">{{ $command }}</b>
+{{- else if or (hasPrefix . "+") (hasPrefix . "^") }}
+<b class="info">{{ $command }}</b>
+{{- else }}
+{{ . }}
+{{- end }}
+{{- end }}
+</pre>
