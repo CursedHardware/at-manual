@@ -1,6 +1,8 @@
 ---
 title: Unspecific Commands
 weight: 1000
+_build:
+  list: false
 ---
 
 ## AT+EGMR (Modem Revision) {#ategmr}

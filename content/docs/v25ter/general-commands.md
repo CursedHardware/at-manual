@@ -115,11 +115,13 @@ EC20CEFDR01A01M4G
 OK
 ```
 
-## AT+GSN (IMEI - Request International Mobile Equipment Identity) {#at-gsn}
+## AT+GSN (Request IMEI) {#at-gsn}
 
-The command returns the International Mobile Equipment Identity (IMEI) number of ME.
+The command returns the IMEI (International Mobile Equipment Identity) number of ME.
 
 It is identical with `AT+CGSN`.
+
+Modify IMEI: see [AT+EGMR]({{< ref "unspecific-commands#ategmr" >}})
 
 - Test Command: `AT+GSN=?`
 
