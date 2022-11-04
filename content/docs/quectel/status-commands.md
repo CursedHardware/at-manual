@@ -14,7 +14,7 @@ The command is used to query an extended error and report the cause of the last 
 - The failure to attach GPRS or the failure to activate PDP context
 - The failure to detach GPRS or the failure to deactivate PDP context
 
-The release cause **\<text>** is a text to describe the cause information given by the network.
+The [release cause]({{< ref "at+ceer-cause" >}}) **\<text>** is a text to describe the cause information given by the network.
 
 - Test Command: `AT+CEER=?`
 
@@ -38,9 +38,9 @@ The release cause **\<text>** is a text to describe the cause information given 
 
 Parameter:
 
-- **\<text>** - Release cause text.
+- **\<text>** - [Release cause text]({{< ref "at+ceer-cause" >}}).
 
-  Reason for the last call failure to [setup or release]({{< ref "at+ceer" >}})
+  Reason for the last call failure to setup or release
 
   Both CS and PS domain call types are reported.
 
@@ -1080,7 +1080,7 @@ AT+QCFG="tone/incoming"
 OK
 ```
 
-## `AT+QINDCFG` (URC Indication Configuration) {#atqindcfg}
+## AT+QINDCFG (URC Indication Configuration) {#atqindcfg}
 
 The command is used to control URC indication.
 
