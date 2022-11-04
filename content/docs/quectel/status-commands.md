@@ -180,7 +180,7 @@ This configuration is valid only after the module is restarted.
   OK
   ```
 
-- Write Command:
+- Write Command: `AT+QCFG="nwscanseq",<scanseq>`
 
   Response: `OK` or `ERROR`
 
@@ -194,7 +194,7 @@ Parameter:
 
 - **\<scanseq>** - Number format, Network searching sequence
 
-  (e.g.: `04030201` (LTE/WCDMA/TD-SCDMA/GSM))
+  e.g.: `04030201` (LTE/WCDMA/TD-SCDMA/GSM)
 
   ```csv
   Value,Note
@@ -206,11 +206,182 @@ Parameter:
   05,CDMA
   ```
 
-### AT+QCFG="roamservice" (Roam Service Configuration) {#atqcfg-roamservice}
+### `AT+QCFG="roamservice"` (Roam Service Configuration) {#atqcfg-roamservice}
 
-### AT+QCFG="servicedomain" (Service Domain Configuration) {#atqcfg-servicedomain}
+The command is used to enable or disable the roam service.
 
-### AT+QCFG="band" (Band Configuration) {#atqcfg-band}
+If **\<effect>** is omitted, the configuration will take effect immediately.
+
+- Read Command: `AT+QCFG="roamservice"`
+
+  Response:
+
+  ```at
+  +QCFG: "roamservice",<roammode>
+
+  OK
+  ```
+
+- Write Command: `AT+QCFG="roamservice",<roammode>[,<effect>]`
+
+  Response: `OK` or `ERROR`
+
+  If there is any error related to ME functionality:
+
+  ```at
+  +CME ERROR: <err>
+  ```
+
+Parameter:
+
+- **\<roammode>** - Number format, The mode of roam service
+
+  ```csv
+  Value,Note
+  1,Disable roam service
+  2,Enable roam service
+  255,AUTO (by default)
+  ```
+
+- **\<effect>** - Number format, When to take effect
+
+  ```csv
+  Value,Note
+  0,Take effect after UE reboots
+  1,Take effect immediately
+  ```
+
+### `AT+QCFG="servicedomain"` (Service Domain Configuration) {#atqcfg-servicedomain}
+
+The command specifies the registered service domain.
+
+If **\<effect>** is omitted, the configuration will take effect immediately.
+
+- Read Command: `AT+QCFG="servicedomain"`
+
+  Response:
+
+  ```at
+  +QCFG: "servicedomain",<service>
+
+  OK
+  ```
+
+- Write Command: `AT+QCFG="servicedomain",<service>[,<effect>]`
+
+  Response: `OK` or `ERROR`
+
+  If there is any error related to ME functionality:
+
+  ```at
+  +CME ERROR: <err>
+  ```
+
+Parameter:
+
+- **\<service>** - Service domain of UE
+
+  ```csv
+  Value,Note
+  0,CS only
+  1,PS only
+  2,CS & PS
+  ```
+
+- **\<effect>** - Number format, When to take effect
+
+  ```csv
+  Value,Note
+  0,Take effect after UE reboots
+  1,Take effect immediately
+  ```
+
+### `AT+QCFG="band"` (Band Configuration) {#atqcfg-band}
+
+- Read Command: `AT+QCFG="band"`
+
+  Response:
+
+  ```at
+  +QCFG: "band",<bandval>,<ltebandval>,<tdsbandval>
+
+  OK
+  ```
+
+- Write Command: `AT+QCFG="band",<bandval>,<lteban dval>,<tdsbandval>[,<effect>]`
+
+  Response: `OK` or `ERROR`
+
+  If there is any error related to ME functionality:
+
+  ```at
+  +CME ERROR: <err>
+  ```
+
+Parameter:
+
+- **\<bandval>** - A hexadecimal value that specifies the GSM and WCDMA frequency bands.
+
+  If it is set to 0, it means not to change GSM and WCDMA frequency bands.
+
+  e.g.: `0x0013 = 0x0001 (GSM900) + 0x0002 (GSM1800) + 0x0010 (WCDMA 2100)`
+
+  ```csv
+  Value,Note
+  0x0000,No change
+  0x0001,GSM 900
+  0x0002,GSM 1800
+  0x0004,GSM 850
+  0x0008,GSM 1900
+  0x0010,WCDMA 2100
+  0x0020,WCDMA 1900
+  0x0040,WCDMA 850
+  0x0080,WCDMA 900
+  0x0100,WCDMA 800
+  0x0200,WCDMA 1700
+  0xFFFF,Any frequency band
+  ```
+
+- **\<ltebandval>** - A hexadecimal value that specifies the LTE frequency band.
+
+  If it is set to `0` or `0x40000000`, it means not to change LTE frequency band.
+
+  e.g.: `0x15 = 0x01 (LTE B1) + 0x04 (LTE B3) + 0x10 (LTE B5)`
+
+  ```csv
+  Value,Note
+  0x01,LTE B1
+  0x04,LTE B3
+  0x10,LTE B5
+  0x40,LTE B7
+  0x80,LTE B8
+  0x80000,LTE B20
+  0x7FFFFFFFFFFFFFFF,Any frequency band
+  ```
+
+- **\<tdsbandval>** - A hexadecimal value that specifies the TD-SCDMA frequency band.
+
+  If it is set to `0` or `0x40000000`, it means not to change LTE frequency band.
+
+  e.g.: `0x21 = 0x01 (TDS BCA) + 0x20 (TDS BCF)`
+
+  ```csv
+  Value,Note
+  0x01,TDS BCA (TD-SCDMA Band A)
+  0x02,TDS BCB (TD-SCDMA Band B)
+  0x04,TDS BCC (TD-SCDMA Band C)
+  0x08,TDS BCD (TD-SCDMA Band D)
+  0x10,TDS BCE (TD-SCDMA Band E)
+  0x20,TDS BCF (TD-SCDMA Band F)
+  ```
+
+- **\<effect>** - Number format, When to take effect
+
+  ```csv
+  Value,Note
+  0,Take effect after UE reboots
+  1,Take effect immediately
+  ```
 
 ### AT+QCFG="hsdpacat" (HSDPA Category Configuration) {#atqcfg-hsdpacat}
 
