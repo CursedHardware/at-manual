@@ -1,6 +1,7 @@
 ---
 title: SMS Character Sets Conversions
 linkTitle: SMS Charset Conversions
+weight: 5
 ---
 
 in 3GPP TS 23.038 DCS (Data Coding Scheme) defined three kinds of alphabets in SMS,

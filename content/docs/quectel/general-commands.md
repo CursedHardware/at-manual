@@ -3,7 +3,7 @@ title: General Commands
 weight: 1
 ---
 
-## AT+QURCCFG (Configure URC Indication Option)
+## `AT+QURCCFG` (Configure URC Indication Option)
 
 The command is used to configure the output port of URC.
 
