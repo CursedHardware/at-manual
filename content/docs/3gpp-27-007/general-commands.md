@@ -3,9 +3,15 @@ title: General Commands
 weight: 1
 ---
 
-## AT+CFUN (Set Phone Functionality) {#at-cfun}
+## `AT+CFUN` Set Phone Functionality {#at-cfun}
 
 The command controls the functionality level. It can also be used to reset the UE.
+
+{{< hint warning >}}
+
+- Maximum Response Time: 15s, determined by network.
+
+{{< /hint >}}
 
 - Test Command: `AT+CFUN=?`
 
@@ -32,8 +38,6 @@ The command controls the functionality level. It can also be used to reset the U
   Response: `OK`
 
   If there is any error related to ME functionality: `+CME ERROR: <err>`
-
-- Maximum Response Time: 15s, determined by network.
 
 Example:
 
@@ -68,7 +72,7 @@ AT+COPS?
 OK
 ```
 
-## AT+CMEE (Error Message Format) {#at-cmee}
+## `AT+CMEE` Error Message Format {#at-cmee}
 
 The command controls the format of error result codes: **ERROR**,
 error numbers or verbose messages as **+CME ERROR: \<err>** and **+CMS ERROR: \<err>**.
@@ -125,7 +129,7 @@ AT+CPIN?
 +CME ERROR: SIM not inserted
 ```
 
-## AT+CSCS (Select TE Character Set) {#at-cscs}
+## `AT+CSCS` Select TE Character Set {#at-cscs}
 
 The Write Command informs the module which character set is used by the TE.
 

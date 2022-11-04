@@ -3,7 +3,7 @@ title: Status Control Commands
 weight: 2
 ---
 
-## AT+CPAS (Mobile Equipment Activity Status)
+## `AT+CPAS` Mobile Equipment Activity Status
 
 - Test Command: `AT+CPAS=?`
 

@@ -3,7 +3,7 @@ title: Serial Interface Control Commands
 weight: 2
 ---
 
-## `AT+QRIR` (Restore RI Behavior to Inactive) {#atqrir}
+## `AT+QRIR` Restore RI Behavior to Inactive {#atqrir}
 
 If the RI (ring indicator) behavior is "always", it can be restored to inactive by the _Execution Command_.
 

@@ -3,9 +3,7 @@ title: Serial Interface Control Commands
 weight: 2
 ---
 
-{{< hint info >}}Maximum Response Time: 300ms{{</ hint >}}
-
-## AT&C (Set DCD Function Mode) {#atc}
+## `AT&C` Set DCD Function Mode {#atc}
 
 The command controls the behavior of the UE's DCD (data carrier detection) line.
 
@@ -23,7 +21,7 @@ Name,Value,Note
 ,1,DCD function is ON only in the presence of data carrier
 ```
 
-## AT&D (Set DTR Function Mode) {#atd}
+## `AT&D` Set DTR Function Mode {#atd}
 
 The command determines how the UE responds if DTR line is changed from low to high level during data mode.
 
@@ -42,7 +40,7 @@ Name,Value,Note
 ,2,"Low->High on DTR:\nDisconnect data call, and change to command mode.\nWhen DTR is at high level, auto-answer function is disabled."
 ```
 
-## AT+IFC (Set TE-TA Local Data Flow Control) {#atifc}
+## `AT+IFC` Set TE-TA Local Data Flow Control {#atifc}
 
 The command determines the flow control behavior of the serial port.
 
@@ -107,7 +105,7 @@ AT+IFC?
 OK
 ```
 
-## AT+ICF (Set TE-TA Control Character Framing) {#aticf}
+## `AT+ICF` Set TE-TA Control Character Framing {#aticf}
 
 The command determines the serial interface character framing format and parity received by TA from TE.
 
@@ -142,7 +140,7 @@ Parameter:
 {{< hint info >}}
 
 1. The command is applied for command mode.
-2. The **\<parity>** field is ignored if the **\<format>** field specifies no parity.
+1. The **\<parity>** field is ignored if the **\<format>** field specifies no parity.
 
 {{< /hint >}}
 
@@ -155,7 +153,7 @@ Name,Value,Note
 ,3,Space (0)
 ```
 
-## AT+IPR (Set TE-TA Fixed Local Rate) {#atipr}
+## `AT+IPR` Set TE-TA Fixed Local Rate {#atipr}
 
 The command is used to query and set the baud rate of the UART.
 

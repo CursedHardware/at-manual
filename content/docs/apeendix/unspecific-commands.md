@@ -5,7 +5,9 @@ _build:
   list: false
 ---
 
-## AT+EGMR (Modem Revision) {#ategmr}
+## `AT+EGMR` Modem Revision {#ategmr}
+
+{{< hint warning >}}The command available **unknown**{{< /hint >}}
 
 - Test Command: `AT+EGMR=?`
 

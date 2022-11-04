@@ -285,6 +285,8 @@ weight: 4
 
 ## AT+QPOWD
 
+{{< hint info >}}Quectel Specific Commands{{< /hint >}}
+
 1. Module power down
 
    Condition: `AT+QPOWD`

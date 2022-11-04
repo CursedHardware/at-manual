@@ -3,7 +3,7 @@ title: Status Control Commands
 weight: 3
 ---
 
-## AT+CEER (Extended Error Report) {#atceer}
+## `AT+CEER` Extended Error Report {#atceer}
 
 The command is used to query an extended error and report the cause of the last failed operation, such as:
 
@@ -46,7 +46,7 @@ Parameter:
 
   Cause data is captured from Call Manager events and cached locally to later use by this command.
 
-## AT+QCFG (Extended Configuration Settings) {#atqcfg}
+## `AT+QCFG` Extended Configuration Settings {#atqcfg}
 
 The command is used to query and configure various settings of UE.
 
@@ -1080,7 +1080,7 @@ AT+QCFG="tone/incoming"
 OK
 ```
 
-## AT+QINDCFG (URC Indication Configuration) {#atqindcfg}
+## `AT+QINDCFG` URC Indication Configuration {#atqindcfg}
 
 The command is used to control URC indication.
 
