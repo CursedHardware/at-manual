@@ -161,7 +161,7 @@ Parameter:
   ```csv
   Value,Note
   0,Take effect after UE reboots
-  1,Take effect immediately
+  1,Take effect immediately (by default)
   ```
 
 ### `AT+QCFG="nwscanseq"` (Network Searching Sequence Configuration) {#atqcfg-nwscanseq}
@@ -248,7 +248,7 @@ Parameter:
   ```csv
   Value,Note
   0,Take effect after UE reboots
-  1,Take effect immediately
+  1,Take effect immediately (by default)
   ```
 
 ### `AT+QCFG="servicedomain"` (Service Domain Configuration) {#atqcfg-servicedomain}
@@ -293,10 +293,14 @@ Parameter:
   ```csv
   Value,Note
   0,Take effect after UE reboots
-  1,Take effect immediately
+  1,Take effect immediately (by default)
   ```
 
 ### `AT+QCFG="band"` (Band Configuration) {#atqcfg-band}
+
+The command specifies the preferred frequency bands to be searched of UE.
+
+If **\<effect>** is omitted, the configuration will take effect immediately.
 
 - Read Command: `AT+QCFG="band"`
 
@@ -380,38 +384,703 @@ Parameter:
   ```csv
   Value,Note
   0,Take effect after UE reboots
-  1,Take effect immediately
+  1,Take effect immediately (by default)
   ```
 
-### AT+QCFG="hsdpacat" (HSDPA Category Configuration) {#atqcfg-hsdpacat}
+### `AT+QCFG="hsdpacat"` (HSDPA Category Configuration) {#atqcfg-hsdpacat}
 
-### AT+QCFG="hsupacat" (HSUPA Category Configuration) {#atqcfg-hsupacat}
+The command specifies the [HSDPA](https://en.wikipedia.org/wiki/HSDPA) category.
 
-### AT+QCFG="rrc" (RRC Release Version Configuration) {#atqcfg-rrc}
+This configuration is valid only after the module is restarted.
 
-### AT+QCFG="sgsn" (UE SGSN Release Version Configuration) {#atqcfg-sgsn}
+- Read Command: `AT+QCFG="hsdpacat"`
 
-### AT+QCFG="msc" (UE MSC Release Version Configuration) {#atqcfg-msc}
+  Response:
 
-### AT+QCFG="PDP/duplicatechk" (Establish Multi PDNs with the Same APN) {#atqcfg-pdf-duplicatechk}
+  ```at
+  +QCFG: "hsdpacat",<cat>
 
-### AT+QCFG="tdscsq" (Set TD-SCDMA RSSI Range) {#atqcfg-tdscsq}
+  OK
+  ```
 
-### AT+QCFG="urc/ri/ring" (RI Behavior When RING URC is Presented) {#atqcfg-urc-ri-ring}
+- Write Command: `AT+QCFG="hsdpacat",<cat>`
 
-### AT+QCFG="urc/ri/smsincoming" (RI Behavior When Incoming SMS URCs are Presente) {#atqcfg-urc-ri-smsincoming}
+  Response: `OK` or `ERROR`
 
-### AT+QCFG="urc/ri/other" (RI Behavior When Other URCs are Presented) {#atqcfg-urc-ri-other}
+  If there is any error related to ME functionality:
 
-### AT+QCFG="risignaltype" (RI Signal Output Carrier) {#atqcfg-risignaltype}
+  ```at
+  +CME ERROR: <err>
+  ```
 
-### AT+QCFG="urc/delay" (Delay URC Indication) {#atqcfg-urc-delay}
+Parameter:
 
-### AT+QCFG="urc/cache" (URC Cache Function) {#atqcfg-urc-cache}
+- **\<cat>** - HSDPA category
 
-### AT+QCFG="tone/incoming" (Ring Tone Function) {#atqcfg-tone-incoming}
+  ```csv
+  Category,Note
+  6,Category 6
+  8,Category 8
+  10,Category 10
+  12,Category 12
+  14,Category 14
+  18,Category 18
+  20,Category 20
+  24,Category 24 (by default)
+  ```
 
-## AT+QINDCFG (URC Indication Configuration) {#atqindcfg}
+### `AT+QCFG="hsupacat"` (HSUPA Category Configuration) {#atqcfg-hsupacat}
+
+The command specifies the [HSUPA](https://en.wikipedia.org/wiki/HSUPA) category.
+
+This configuration is valid only after the module is restarted.
+
+- Read Command: `AT+QCFG="hsupacat"`
+
+  Response:
+
+  ```at
+  +QCFG: "hsupacat",<cat>
+
+  OK
+  ```
+
+- Write Command: `AT+QCFG="hsupacat",<cat>`
+
+  Response: `OK` or `ERROR`
+
+  If there is any error related to ME functionality:
+
+  ```at
+  +CME ERROR: <err>
+  ```
+
+Parameter:
+
+- **\<cat>** - HSUPA category
+
+  ```csv
+  Category,Note
+  5,Category 5
+  6,Category 6 (by default)
+  ```
+
+### `AT+QCFG="rrc"` (RRC Release Version Configuration) {#atqcfg-rrc}
+
+The command specifies the RRC release version.
+
+This configuration is valid only after the module is restarted.
+
+- Read Command: `AT+QCFG="rrc"`
+
+  Response:
+
+  ```at
+  +QCFG: "rrc",<rrcr>
+
+  OK
+  ```
+
+- Write Command: `AT+QCFG="rrc",<rrcr>`
+
+  Response: `OK` or `ERROR`
+
+  If there is any error related to ME functionality:
+
+  ```at
+  +CME ERROR: <err>
+  ```
+
+Parameter:
+
+- **\<rrcr>** - RRC release version.
+
+  ```csv
+  Value,Version
+  0,R99
+  1,R5
+  2,R6
+  3,R7
+  4,R8 (by default)
+  ```
+
+### `AT+QCFG="sgsn"` (UE SGSN Release Version Configuration) {#atqcfg-sgsn}
+
+The command specifies the UE SGSN release version.
+
+This configuration is valid only after the module is restarted.
+
+- Read Command: `AT+QCFG="rrc"`
+
+  Response:
+
+  ```at
+  +QCFG: "sgsn",<sgsnr>
+
+  OK
+  ```
+
+- Write Command: `AT+QCFG="sgsn",<sgsnr>`
+
+  Response: `OK` or `ERROR`
+
+  If there is any error related to ME functionality:
+
+  ```at
+  +CME ERROR: <err>
+  ```
+
+Parameter:
+
+- **\<sgsnr>** - SGSN release version.
+
+  ```csv
+  Value,Version
+  0,R97
+  1,R99
+  2,Dynamic (by default)
+  ```
+
+### `AT+QCFG="msc"` (UE MSC Release Version Configuration) {#atqcfg-msc}
+
+The command specifies the UE MSC release version.
+
+This configuration is valid only after the module is restarted.
+
+- Read Command: `AT+QCFG="msc"`
+
+  Response:
+
+  ```at
+  +QCFG: "msc",<mscr>
+
+  OK
+  ```
+
+- Write Command: `AT+QCFG="msc",<mscr>`
+
+  Response: `OK` or `ERROR`
+
+  If there is any error related to ME functionality:
+
+  ```at
+  +CME ERROR: <err>
+  ```
+
+Parameter:
+
+- **\<mscr>** - MSC release version.
+
+  ```csv
+  Value,Version
+  0,R97
+  1,R99
+  2,Dynamic (by default)
+  ```
+
+### `AT+QCFG="pdp/duplicatechk"` (Establish Multi PDNs with the Same APN) {#atqcfg-pdf-duplicatechk}
+
+The command allows/refuses establishing multi PDNs with the same APN profile.
+
+The configuration will take effect immediately.
+
+- Read Command: `AT+QCFG="pdp/duplicatechk"`
+
+  Response:
+
+  ```at
+  +QCFG: "pdp/duplicatechk",<enable>
+
+  OK
+  ```
+
+- Write Command: `AT+QCFG="pdp/duplicatechk",<enable>`
+
+Parameter:
+
+- **\<enable>** - Establish multi PDNs with the same APN profile
+
+  ```csv
+  Value,Note
+  0,Refused
+  1,Allowed
+  ```
+
+### `AT+QCFG="tdscsq"` (Set TD-SCDMA RSSI Range) {#atqcfg-tdscsq}
+
+The command is used to set RSSI range in TD-SCDMA.
+
+The configuration will take effect immediately.
+
+{{< hint warning >}}
+
+This command is valid only in TD-SCDMA.
+
+Show the RSSI value by **AT+CSQ** and get RSSI details by **AT+CSQ**.
+
+{{< /hint >}}
+
+- Read Command: `AT+QCFG="tdscsq"`
+
+  Response:
+
+  ```at
+  +QCFG: "tdscsq",<value>
+
+  OK
+  ```
+
+- Write Command: `AT+QCFG="tdscsq",<value>`
+
+  Response: `OK` or `ERROR`
+
+  If there is any error related to ME functionality:
+
+  ```at
+  +CME ERROR: <err>
+  ```
+
+Parameter:
+
+- **\<value>** - RSSI between
+
+  ```csv
+  Value,Note
+  0,RSSI between 0-31 (by default)
+  1,RSSI between 100-191
+  ```
+
+### `AT+QCFG="urc/ri/ring"` (RI Behavior When RING URC is Presented) {#atqcfg-urc-ri-ring}
+
+**AT+QCFG="urc/ri/ring"**, **AT+QCFG="urc/ri/smsincoming"** and **AT+QCFG="urc/ri/other"** control the RI
+(ring indicator) behavior when a [URC]({{< ref "urc" >}}) is reported.
+
+These configurations will be stored into NV automatically.
+
+The ring indicator is active low.
+
+**AT+QCFG="urc/ri/ring"** specifies the RI behavior when URC **RING** is presented to indicate an incoming call.
+
+The sum of parameter **\<activeduration>** and **\<inactiveduration>** determines the interval time of **RING** indications when a call is coming.
+
+- Read Command: `AT+QCFG="urc/ri/ring"`
+
+  Response:
+
+  ```at
+  +QCFG: "urc/ri/ring",<typeri>,<pulseduration>,<activeduration>,<inactiveduration>,<ringnodisturbing>,<pulsecount>
+
+  OK
+  ```
+
+- Write Command: `AT+QCFG="urc/ri/ring",<typeri>`
+
+  Overloads:
+
+  ```at
+  AT+QCFG="urc/ri/ring","off"
+  AT+QCFG="urc/ri/ring","pulse"[,<pulseduration>[,<ringnodisturbing>]]]
+  AT+QCFG="urc/ri/ring","always"
+  AT+QCFG="urc/ri/ring","auto"[,<ringnodisturbing>]
+  AT+QCFG="urc/ri/ring","wave"[,<activeduration>[,<inactiveduration>[,<ringnodisturbing>]]]]
+  ```
+
+  Response: `OK` or `ERROR`
+
+  If there is any error related to ME functionality:
+
+  ```at
+  +CME ERROR: <err>
+  ```
+
+Parameter:
+
+- **\<typeri>** - RI behavior when URCs are presented
+
+  - `"off"`
+
+    No change.
+
+    Ring indicator keeps inactive.
+
+  - `"pulse"` (by default)
+
+    Pulse width determined by **\<pulseduration>**.
+
+  - `"always"`
+
+    Change to active.
+
+    RI behavior can be restored to inactive by **AT+QRIR**.
+
+  - `"auto"`
+
+    When **RING** is presented to indicate an incoming call.
+
+    The ring indicator changes to and keeps active.
+
+    When ring of the incoming call ends, either answering or hanging up the incoming call, the ring indicator will change to inactive.
+
+  - `"wave"`
+
+    When **RING** is presented to indicate an incoming call.
+
+    The ring indicator outputs a square wave.
+
+    Both **\<activeduration>** and **\<inactiveduration>** are used to set parameters of the square wave.
+
+    When the ring of incoming call ends, either answering or hanging up the incoming call, the ring indicator will change to inactive.
+
+- **\<pulseduration>** - The width of pulse.
+
+  The value ranges from 1 to 2000ms and the default is _120ms_.
+
+  This parameter is only meaningful when **\<typeri>** is `"pulse"`.
+
+  If this parameter is not needed, it can set it as null.
+
+- **\<activeduration>** - The active duration of the square wave.
+
+  The value ranges from 1 to 10000ms, and the default is _1000ms_.
+
+  This parameter is only meaningful when **\<typeri>** is `"wave"`.
+
+- **\<inactiveduration>** - The inactive duration of the square wave.
+
+  The value ranges from 1 to 10000ms, and the default is _5000ms_.
+
+  This parameter is only meaningful when **\<typeri>** is `"wave"`.
+
+- **\<ringnodisturbing>** - Set whether the ring indicator behavior could be disturbed.
+
+  This parameter is only meaningful when **\<typeri>** is configured to `"auto"` or `"wave"`.
+
+  For example, when **\<typeri>** is configured to `"wave"`, if the square wave needs not to be disturbed by other URCs (including SMS related URCs), then **\<ringnodisturbing>** should be set to `"on"`.
+
+- **\<pulsecount>** - The count of pulse.
+
+  This parameter is only meaningful when **\<typeri>** is `"pulse"`.
+
+  The value ranges from 1 to 5 and the default is _1_.
+
+  The interval time between two pulses is equal to **\<pulseduration>**.
+
+### `AT+QCFG="urc/ri/smsincoming"` (RI Behavior When Incoming SMS URCs are Presente) {#atqcfg-urc-ri-smsincoming}
+
+The command specifies the RI (ring indicator) behavior when related incoming message URCs are presented.
+
+Incoming message [URCs]({{< ref "urc" >}}) include **+CMTI**, **+CMT**, **+CDS** and **+CBM**.
+
+- Read Command: `AT+QCFG="urc/ri/smsincoming"`
+
+  Response:
+
+  ```at
+  +QCFG: "urc/ri/smsincoming",<typeri>,<pulseduration>,<pulsecount>
+
+  OK
+  ```
+
+- Write Command: `AT+QCFG="urc/ri/smsincoming",<typeri>[,<pulseduration>]`
+
+  Response: `OK` or `ERROR`
+
+  If there is any error related to ME functionality:
+
+  ```at
+  +CME ERROR: <err>
+  ```
+
+Parameter:
+
+- **\<typeri>** - RI behavior when URCs are presented
+
+  - `"off"`
+
+    No change.
+
+    Ring indicator keeps inactive.
+
+  - `"pulse"` (by default)
+
+    Pulse width determined by **\<pulseduration>**.
+
+  - `"always"`
+
+    Change to active.
+
+    RI behavior can be restored to inactive by **AT+QRIR**.
+
+- **\<pulseduration>** - The width of pulse.
+
+  The value ranges from 1 to 2000ms and the default is _120ms_.
+
+  This parameter is only valid when **\<typeri>** is **"pulse"**.
+
+- **\<pulsecount>** - The count of pulse.
+
+  This parameter is only meaningful when **\<typeri>** is **"pulse"**.
+
+  Value ranges from 1 to 5 and the default is _1_.
+
+  The interval time between two pulses is equal to **\<pulseduration>**.
+
+### `AT+QCFG="urc/ri/other"` (RI Behavior When Other URCs are Presented) {#atqcfg-urc-ri-other}
+
+The command specifies the RI (ring indicator) behavior when other [URCs]({{< ref "urc" >}}) are presented.
+
+- Read Commmand: `AT+QCFG="urc/ri/other"`
+
+  Response:
+
+  ```at
+  +QCFG: "urc/ri/other",<typeri>,<pulseduration>,<pulsecount>
+
+  OK
+  ```
+
+- Write Command: `AT+QCFG="urc/ri/other",<typeri>[,<pulseduration>]`
+
+  Response: `OK` or `ERROR`
+
+  If there is any error related to ME functionality:
+
+  ```at
+  +CME ERROR: <err>
+  ```
+
+Parameter:
+
+- **\<typeri>** - RI behavior when URCs are presented
+
+  - `"off"`
+
+    No change.
+
+    Ring indicator keeps inactive.
+
+  - `"pulse"` (by default)
+
+    Pulse width determined by **\<pulseduration>**.
+
+- **\<pulseduration>** - The width of pulse.
+
+  The value ranges from 1 to 2000ms and the default is _120ms_.
+
+  This parameter is only valid when **\<typeri>** is **"pulse"**.
+
+- **\<pulsecount>** - The count of pulse.
+
+  This parameter is only meaningful when **\<typeri>** is **"pulse"**.
+
+  Value ranges from 1 to 5 and the default is _1_.
+
+  The interval time between two pulses is equal to **\<pulseduration>**.
+
+### `AT+QCFG="risignaltype"` (RI Signal Output Carrier) {#atqcfg-risignaltype}
+
+The command specifies the RI (ring indicator) signal output carrier.
+
+- Read Commmand: `AT+QCFG="risignaltype"`
+
+  Response:
+
+  ```at
+  +QCFG: "risignaltype",<risignatype>
+
+  OK
+  ```
+
+- Write Command: `AT+QCFG="risignaltype",[<risignatype>]`
+
+  Response: `OK` or `ERROR`
+
+  If there is any error related to ME functionality:
+
+  ```at
+  +CME ERROR: <err>
+  ```
+
+Parameter:
+
+- **\<risignaltype>** - RI signal output carrier.
+
+  - `"respective"`
+
+    The ring indicator behaves on the port where URC is presented.
+
+    For example, if a URC is presented on **UART port**,
+    it is physical ring indicator.
+
+    If the URC is presented on **USB port**,
+    it is virtual ring indicator.
+
+    If the URC is presented on **USB AT port**,
+    and the port does not support ring indicator,
+    then there will be no ring indicator.
+
+    **AT+QURCCFG="urcport"** can get the port on which the URC is presented.
+
+  - `"physical"`
+
+    No matter which port the URC is presented on.
+
+    URC only causes the behavior of physical ring indicator.
+
+### `AT+QCFG="urc/delay"` (Delay URC Indication) {#atqcfg-urc-delay}
+
+The command can delay the output of URC indication until ring indicator pulse ends.
+
+- Read Commmand: `AT+QCFG="urc/delay"`
+
+  Response:
+
+  ```at
+  +QCFG: "urc/delay",<enable>
+
+  OK
+  ```
+
+- Write Command: `AT+QCFG="urc/delay",<enable>`
+
+  Response: `OK` or `ERROR`
+
+  If there is any error related to ME functionality:
+
+  ```at
+  +CME ERROR: <err>
+  ```
+
+Parameter:
+
+- **\<enable>** - RI signal output carrier.
+
+  - 0 - URC indication will be outputted when ring indicator pulse starts
+
+  - 1 - URC indication will be outputted when ring indicator pulse ends
+
+    Only effective when the type of ring indicator is `"pulse"`.
+
+    Please refer to **AT+QCFG="urc/ri/ring"**, **AT+QCFG="urc/ri/smsincoming"** and **AT+QCFG="urc/ri/other"** for more details.
+
+### `AT+QCFG="urc/cache"` (URC Cache Function) {#atqcfg-urc-cache}
+
+{{< hint warning >}}
+
+The settings of the command will take effect immediately, and will be saved after power off.
+
+{{< /hint >}}
+
+- Read Commmand: `AT+QCFG="urc/cache"`
+
+  Response:
+
+  ```at
+  +QCFG: "urc/cache",<enable>
+
+  OK
+  ```
+
+- Write Command: `AT+QCFG="urc/cache",<enable>`
+
+  Response: `OK` or `ERROR`
+
+  If there is any error related to ME functionality:
+
+  ```at
+  +CME ERROR: <err>
+  ```
+
+Parameter:
+
+- **\<enable>** - URC cache
+
+  ```csv
+  Value,Note
+  0,Disable URC cache
+  1,Enable URC cache
+  ```
+
+Example:
+
+```at
+AT+QCFG="urc/cache"
++QCFG: "urc/cache",0 // Disable URC cache
+
+OK
+AT+QCFG="urc/cache",1 // Enable URC cache
+OK
+AT+QCFG="urc/cache" // Make a call and send two messages to the module
++QCFG: "urc/cache",1
+
+OK
+AT+QCFG="urc/cache",0 // Disable URC cache
+OK
+RING          // Output cached URC
+NO CARRIER    // Output cached URC
++CMTI: "ME",0 // Output cached URC
++CMTI: "ME",1 // Output cached URC
+AT+QCFG="urc/cache"
++QCFG: "urc/cache",0 // Disable URC cache
+OK
+```
+
+### `AT+QCFG="tone/incoming"` (Ring Tone Function) {#atqcfg-tone-incoming}
+
+{{< hint warning >}}
+
+The settings of the command will take effect immediately, and will be saved after power off.
+
+{{< /hint >}}
+
+- Read Commmand: `AT+QCFG="tone/incoming"`
+
+  Response:
+
+  ```at
+  +QCFG: "tone/incoming",<enable>
+
+  OK
+  ```
+
+- Write Command: `AT+QCFG="tone/incoming",<enable>`
+
+  Response: `OK` or `ERROR`
+
+  If there is any error related to ME functionality:
+
+  ```at
+  +CME ERROR: <err>
+  ```
+
+Parameter:
+
+- **\<enable>** - Ring tone
+
+  ```csv
+  Value,Note
+  0,Disable Ring tone
+  1,Enable NOKIA Ring tone
+  2,Enable Ring tone
+  ```
+
+Example:
+
+```at
+AT+QCFG="tone/incoming"
++QCFG: "tone/incoming",0 // Ring tone function is disabled
+
+OK
+AT+QCFG="tone/incoming",1 // Enable NOKIA Ring tone
+
+OK
+AT+QCFG="tone/incoming"
++QCFG: "tone/incoming",1
+
+OK
+```
+
+## `AT+QINDCFG` (URC Indication Configuration) {#atqindcfg}
 
 The command is used to control URC indication.
 

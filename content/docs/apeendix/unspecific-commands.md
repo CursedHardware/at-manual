@@ -3,14 +3,14 @@ title: Unspecific Commands
 weight: 1000
 ---
 
-## AT+EGMR (Modem Revision)
+## AT+EGMR (Modem Revision) {#ategmr}
 
 - Test Command: `AT+EGMR=?`
 
   Response:
 
   ```at
-  +EGMR: (0,1),(5,7,9,10)
+  +EGMR: (list of supported <mode>s),(list of supported <format>s)
 
   OK
   ```

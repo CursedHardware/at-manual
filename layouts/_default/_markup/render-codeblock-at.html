@@ -14,7 +14,7 @@
 {{- else if or (hasPrefix . "+") (hasPrefix . "^") }}
 <b>{{ $command }}</b>
 {{- else }}
-{{ . }}
+{{ $command }}
 {{- end }}
 {{- end }}
 </pre>
