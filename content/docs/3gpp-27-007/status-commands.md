@@ -36,7 +36,7 @@ weight: 2
 Parameter:
 
 ```csv
-Name,Value,Note
+Name,Value,Meaning
 \<pas>,0,Ready
 ,3,Ringing
 ,4,Call in progress or call hold

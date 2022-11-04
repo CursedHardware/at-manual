@@ -16,5 +16,6 @@
 {{- else }}
 {{ $command }}
 {{- end }}
+{{- with $comment }}<span class="comment">{{ if $command }} {{ end }}// {{ . }}</span>{{ end }}
 {{- end }}
 </pre>

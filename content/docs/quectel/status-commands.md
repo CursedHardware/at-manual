@@ -108,7 +108,7 @@ Parameter:
 - **\<attachmode>** - Number format, the mode to attach GRPS when UE is powered on
 
   ```csv
-  Value,Note
+  Value,Meaning
   0,Manual attach
   1,Auto attach (by default)
   ```
@@ -144,7 +144,7 @@ Parameter:
 - **\<scanmode>** - Number format, network mode to be searched
 
   ```csv
-  Value,Note
+  Value,Meaning
   0,AUTO (by default)
   1,GSM only
   2,WCDMA only
@@ -159,7 +159,7 @@ Parameter:
 - **\<effect>** - Number format, When to take effect
 
   ```csv
-  Value,Note
+  Value,Meaning
   0,Take effect after UE reboots
   1,Take effect immediately (by default)
   ```
@@ -197,7 +197,7 @@ Parameter:
   e.g.: `04030201` (LTE/WCDMA/TD-SCDMA/GSM)
 
   ```csv
-  Value,Note
+  Value,Meaning
   00,Automatic (LTE/ WCDMA/TD-SCDMA/GSM)
   01,GSM
   02,TD-SCDMA
@@ -237,7 +237,7 @@ Parameter:
 - **\<roammode>** - Number format, The mode of roam service
 
   ```csv
-  Value,Note
+  Value,Meaning
   1,Disable roam service
   2,Enable roam service
   255,AUTO (by default)
@@ -246,7 +246,7 @@ Parameter:
 - **\<effect>** - Number format, When to take effect
 
   ```csv
-  Value,Note
+  Value,Meaning
   0,Take effect after UE reboots
   1,Take effect immediately (by default)
   ```
@@ -282,7 +282,7 @@ Parameter:
 - **\<service>** - Service domain of UE
 
   ```csv
-  Value,Note
+  Value,Meaning
   0,CS only
   1,PS only
   2,CS & PS
@@ -291,7 +291,7 @@ Parameter:
 - **\<effect>** - Number format, When to take effect
 
   ```csv
-  Value,Note
+  Value,Meaning
   0,Take effect after UE reboots
   1,Take effect immediately (by default)
   ```
@@ -331,7 +331,7 @@ Parameter:
   e.g.: `0x0013 = 0x0001 (GSM900) + 0x0002 (GSM1800) + 0x0010 (WCDMA 2100)`
 
   ```csv
-  Value,Note
+  Value,Meaning
   0x0000,No change
   0x0001,GSM 900
   0x0002,GSM 1800
@@ -353,7 +353,7 @@ Parameter:
   e.g.: `0x15 = 0x01 (LTE B1) + 0x04 (LTE B3) + 0x10 (LTE B5)`
 
   ```csv
-  Value,Note
+  Value,Meaning
   0x01,LTE B1
   0x04,LTE B3
   0x10,LTE B5
@@ -370,7 +370,7 @@ Parameter:
   e.g.: `0x21 = 0x01 (TDS BCA) + 0x20 (TDS BCF)`
 
   ```csv
-  Value,Note
+  Value,Meaning
   0x01,TDS BCA (TD-SCDMA Band A)
   0x02,TDS BCB (TD-SCDMA Band B)
   0x04,TDS BCC (TD-SCDMA Band C)
@@ -382,7 +382,7 @@ Parameter:
 - **\<effect>** - Number format, When to take effect
 
   ```csv
-  Value,Note
+  Value,Meaning
   0,Take effect after UE reboots
   1,Take effect immediately (by default)
   ```
@@ -418,7 +418,7 @@ Parameter:
 - **\<cat>** - HSDPA category
 
   ```csv
-  Category,Note
+  Category,Meaning
   6,Category 6
   8,Category 8
   10,Category 10
@@ -460,7 +460,7 @@ Parameter:
 - **\<cat>** - HSUPA category
 
   ```csv
-  Category,Note
+  Category,Meaning
   5,Category 5
   6,Category 6 (by default)
   ```
@@ -601,7 +601,7 @@ Parameter:
 - **\<enable>** - Establish multi PDNs with the same APN profile
 
   ```csv
-  Value,Note
+  Value,Meaning
   0,Refused
   1,Allowed
   ```
@@ -645,7 +645,7 @@ Parameter:
 - **\<value>** - RSSI between
 
   ```csv
-  Value,Note
+  Value,Meaning
   0,RSSI between 0-31 (by default)
   1,RSSI between 100-191
   ```
@@ -996,7 +996,7 @@ Parameter:
 - **\<enable>** - URC cache
 
   ```csv
-  Value,Note
+  Value,Meaning
   0,Disable URC cache
   1,Enable URC cache
   ```
@@ -1058,7 +1058,7 @@ Parameter:
 - **\<enable>** - Ring tone
 
   ```csv
-  Value,Note
+  Value,Meaning
   0,Disable Ring tone
   1,Enable NOKIA Ring tone
   2,Enable Ring tone
@@ -1153,7 +1153,7 @@ Parameter:
 - **\<enable>** - URC indication is ON or OFF
 
   ```csv
-  Value,Note
+  Value,Meaning
   0,OFF
   1,ON
   ```
@@ -1161,7 +1161,7 @@ Parameter:
 - **\<savetonvram>** - Whether to save configuration into NV.
 
   ```csv
-  Value,Note
+  Value,Meaning
   0,Not save (by default)
   1,Save
   ```

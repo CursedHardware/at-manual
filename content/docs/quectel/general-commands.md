@@ -36,12 +36,12 @@ The command is used to configure the output port of URC.
 Parameter:
 
 ```csv
-Name,Note
+Name,Meaning
 `<urcportvalue>`,Set URC output port
 ```
 
 ```csv
-urcportvalue,Note
+urcportvalue,Meaning
 "usbat",USB AT port
 "usbmodem",USB modem port
 "uart1",Main UART

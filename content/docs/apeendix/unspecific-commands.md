@@ -36,7 +36,7 @@ _build:
 Parameter:
 
 ```csv
-Name,Value,Note
+Name,Value,Meaning
 \<mode>,0,[Unknown]
 ,1,Write
 ,2,Read

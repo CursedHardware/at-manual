@@ -3,7 +3,7 @@ title: General Commands
 weight: 1
 ---
 
-## `AT+CFUN` Set Phone Functionality {#at-cfun}
+## `AT+CFUN` Set Phone Functionality {#atcfun}
 
 The command controls the functionality level. It can also be used to reset the UE.
 
@@ -72,7 +72,7 @@ AT+COPS?
 OK
 ```
 
-## `AT+CMEE` Error Message Format {#at-cmee}
+## `AT+CMEE` Error Message Format {#atcmee}
 
 The command controls the format of error result codes: **ERROR**,
 error numbers or verbose messages as **+CME ERROR: \<err>** and **+CMS ERROR: \<err>**.
@@ -105,7 +105,7 @@ error numbers or verbose messages as **+CME ERROR: \<err>** and **+CMS ERROR: \<
   Response: `OK`
 
   ```csv
-  Name,Value,Note
+  Name,Value,Meaning
   `<n>`,0,Disable result code
   ,1,Enable result code and use numeric values
   ,2,Enable result code and use verbose values
@@ -129,7 +129,7 @@ AT+CPIN?
 +CME ERROR: SIM not inserted
 ```
 
-## `AT+CSCS` Select TE Character Set {#at-cscs}
+## `AT+CSCS` Select TE Character Set {#atcscs}
 
 The Write Command informs the module which character set is used by the TE.
 
@@ -162,7 +162,7 @@ This enables the UE to convert character strings correctly between TE and UE cha
   Response: `OK`
 
   ```csv
-  Name,Value,Note
+  Name,Value,Meaning
   `<chset>`,GSM,GSM default alphabet
   ,IRA,International reference alphabet
   ,UCS2,UCS2 alphabet

@@ -16,7 +16,7 @@ The command controls the behavior of the UE's DCD (data carrier detection) line.
 Parameter:
 
 ```csv
-Name,Value,Note
+Name,Value,Meaning
 \<value>,0,DCD function is always ON
 ,1,DCD function is ON only in the presence of data carrier
 ```
@@ -34,7 +34,7 @@ The command determines how the UE responds if DTR line is changed from low to hi
 Parameter:
 
 ```csv
-Name,Value,Note
+Name,Value,Meaning
 \<value>,0,TA ignores status on DTR
 ,1,"Low->High on DTR:\nChange to command mode\nwhile remaining the connected call."
 ,2,"Low->High on DTR:\nDisconnect data call, and change to command mode.\nWhen DTR is at high level, auto-answer function is disabled."
@@ -75,7 +75,7 @@ Parameter:
 - **\<dce_by_dte>** - Specifies the method that will be used by TE when receiving data from TA
 
   ```csv
-  Value,Note
+  Value,Meaning
   1,None
   2,RTS flow control
   ```
@@ -83,7 +83,7 @@ Parameter:
 - **\<dte_by_dce>** - Specifies the method that will be used by TA when receiving data from TE
 
   ```csv
-  Value,Note
+  Value,Meaning
   1,None
   2,CTS flow control
   ```
@@ -145,7 +145,7 @@ Parameter:
 {{< /hint >}}
 
 ```csv
-Name,Value,Note
+Name,Value,Meaning
 \<format>,3,8 data 0 parity 1 stop
 \<parity>,0,Odd
 ,1,Even
