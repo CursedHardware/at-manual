@@ -77,7 +77,7 @@ The command is used to query and configure various settings of UE.
   OK
   ```
 
-### `AT+QCFG="gprsattach"` (GPRS Attach Mode Configuration) {#atqcfg-gprsattach}
+### `AT+QCFG="gprsattach"` GPRS Attach Mode Configuration {#atqcfg-gprsattach}
 
 The command specifies the mode to attach GPRS when UE is powered on.
 
@@ -113,7 +113,7 @@ Parameter:
   1,Auto attach (by default)
   ```
 
-### `AT+QCFG="nwscanmode"` (Network Search Mode Configuration) {#atqcfg-nwscanmode}
+### `AT+QCFG="nwscanmode"` Network Search Mode Configuration {#atqcfg-nwscanmode}
 
 The command specifies the network mode to be searched.
 
@@ -164,7 +164,7 @@ Parameter:
   1,Take effect immediately (by default)
   ```
 
-### `AT+QCFG="nwscanseq"` (Network Searching Sequence Configuration) {#atqcfg-nwscanseq}
+### `AT+QCFG="nwscanseq"` Network Searching Sequence Configuration {#atqcfg-nwscanseq}
 
 The command specifies the sequence of searching network.
 
@@ -206,7 +206,7 @@ Parameter:
   05,CDMA
   ```
 
-### `AT+QCFG="roamservice"` (Roam Service Configuration) {#atqcfg-roamservice}
+### `AT+QCFG="roamservice"` Roam Service Configuration {#atqcfg-roamservice}
 
 The command is used to enable or disable the roam service.
 
@@ -251,7 +251,7 @@ Parameter:
   1,Take effect immediately (by default)
   ```
 
-### `AT+QCFG="servicedomain"` (Service Domain Configuration) {#atqcfg-servicedomain}
+### `AT+QCFG="servicedomain"` Service Domain Configuration {#atqcfg-servicedomain}
 
 The command specifies the registered service domain.
 
@@ -296,7 +296,7 @@ Parameter:
   1,Take effect immediately (by default)
   ```
 
-### `AT+QCFG="band"` (Band Configuration) {#atqcfg-band}
+### `AT+QCFG="band"` Band Configuration {#atqcfg-band}
 
 The command specifies the preferred frequency bands to be searched of UE.
 
@@ -387,7 +387,7 @@ Parameter:
   1,Take effect immediately (by default)
   ```
 
-### `AT+QCFG="hsdpacat"` (HSDPA Category Configuration) {#atqcfg-hsdpacat}
+### `AT+QCFG="hsdpacat"` HSDPA Category Configuration {#atqcfg-hsdpacat}
 
 The command specifies the [HSDPA](https://en.wikipedia.org/wiki/HSDPA) category.
 
@@ -429,7 +429,7 @@ Parameter:
   24,Category 24 (by default)
   ```
 
-### `AT+QCFG="hsupacat"` (HSUPA Category Configuration) {#atqcfg-hsupacat}
+### `AT+QCFG="hsupacat"` HSUPA Category Configuration {#atqcfg-hsupacat}
 
 The command specifies the [HSUPA](https://en.wikipedia.org/wiki/HSUPA) category.
 
@@ -465,7 +465,7 @@ Parameter:
   6,Category 6 (by default)
   ```
 
-### `AT+QCFG="rrc"` (RRC Release Version Configuration) {#atqcfg-rrc}
+### `AT+QCFG="rrc"` RRC Release Version Configuration {#atqcfg-rrc}
 
 The command specifies the RRC release version.
 
@@ -504,7 +504,7 @@ Parameter:
   4,R8 (by default)
   ```
 
-### `AT+QCFG="sgsn"` (UE SGSN Release Version Configuration) {#atqcfg-sgsn}
+### `AT+QCFG="sgsn"` UE SGSN Release Version Configuration {#atqcfg-sgsn}
 
 The command specifies the UE SGSN release version.
 
@@ -541,7 +541,7 @@ Parameter:
   2,Dynamic (by default)
   ```
 
-### `AT+QCFG="msc"` (UE MSC Release Version Configuration) {#atqcfg-msc}
+### `AT+QCFG="msc"` UE MSC Release Version Configuration {#atqcfg-msc}
 
 The command specifies the UE MSC release version.
 
@@ -578,7 +578,7 @@ Parameter:
   2,Dynamic (by default)
   ```
 
-### `AT+QCFG="pdp/duplicatechk"` (Establish Multi PDNs with the Same APN) {#atqcfg-pdf-duplicatechk}
+### `AT+QCFG="pdp/duplicatechk"` Establish Multi PDNs with the Same APN {#atqcfg-pdf-duplicatechk}
 
 The command allows/refuses establishing multi PDNs with the same APN profile.
 
@@ -606,7 +606,7 @@ Parameter:
   1,Allowed
   ```
 
-### `AT+QCFG="tdscsq"` (Set TD-SCDMA RSSI Range) {#atqcfg-tdscsq}
+### `AT+QCFG="tdscsq"` Set TD-SCDMA RSSI range {#atqcfg-tdscsq}
 
 The command is used to set RSSI range in TD-SCDMA.
 
@@ -650,7 +650,7 @@ Parameter:
   1,RSSI between 100-191
   ```
 
-### `AT+QCFG="urc/ri/ring"` (RI Behavior When RING URC is Presented) {#atqcfg-urc-ri-ring}
+### `AT+QCFG="urc/ri/ring"` RI behavior when RING URC is Presented {#atqcfg-urc-ri-ring}
 
 **AT+QCFG="urc/ri/ring"**, **AT+QCFG="urc/ri/smsincoming"** and **AT+QCFG="urc/ri/other"** control the RI
 (ring indicator) behavior when a [URC]({{< ref "urc" >}}) is reported.
@@ -765,7 +765,7 @@ Parameter:
 
   The interval time between two pulses is equal to **\<pulseduration>**.
 
-### `AT+QCFG="urc/ri/smsincoming"` (RI Behavior When Incoming SMS URCs are Presente) {#atqcfg-urc-ri-smsincoming}
+### `AT+QCFG="urc/ri/smsincoming"` RI behavior when incoming SMS URCs are presente {#atqcfg-urc-ri-smsincoming}
 
 The command specifies the RI (ring indicator) behavior when related incoming message URCs are presented.
 
@@ -825,7 +825,7 @@ Parameter:
 
   The interval time between two pulses is equal to **\<pulseduration>**.
 
-### `AT+QCFG="urc/ri/other"` (RI Behavior When Other URCs are Presented) {#atqcfg-urc-ri-other}
+### `AT+QCFG="urc/ri/other"` RI behavior when other URCs are Presented {#atqcfg-urc-ri-other}
 
 The command specifies the RI (ring indicator) behavior when other [URCs]({{< ref "urc" >}}) are presented.
 
@@ -877,7 +877,7 @@ Parameter:
 
   The interval time between two pulses is equal to **\<pulseduration>**.
 
-### `AT+QCFG="risignaltype"` (RI Signal Output Carrier) {#atqcfg-risignaltype}
+### `AT+QCFG="risignaltype"` RI signal output carrier {#atqcfg-risignaltype}
 
 The command specifies the RI (ring indicator) signal output carrier.
 
@@ -927,7 +927,7 @@ Parameter:
 
     URC only causes the behavior of physical ring indicator.
 
-### `AT+QCFG="urc/delay"` (Delay URC Indication) {#atqcfg-urc-delay}
+### `AT+QCFG="urc/delay"` Delay URC indication {#atqcfg-urc-delay}
 
 The command can delay the output of URC indication until ring indicator pulse ends.
 
@@ -963,7 +963,7 @@ Parameter:
 
     Please refer to **AT+QCFG="urc/ri/ring"**, **AT+QCFG="urc/ri/smsincoming"** and **AT+QCFG="urc/ri/other"** for more details.
 
-### `AT+QCFG="urc/cache"` (URC Cache Function) {#atqcfg-urc-cache}
+### `AT+QCFG="urc/cache"` URC cache function {#atqcfg-urc-cache}
 
 {{< hint warning >}}
 
@@ -1025,7 +1025,7 @@ AT+QCFG="urc/cache"
 OK
 ```
 
-### `AT+QCFG="tone/incoming"` (Ring Tone Function) {#atqcfg-tone-incoming}
+### `AT+QCFG="tone/incoming"` Ring tone function {#atqcfg-tone-incoming}
 
 {{< hint warning >}}
 
@@ -1080,7 +1080,7 @@ AT+QCFG="tone/incoming"
 OK
 ```
 
-## `AT+QINDCFG` URC Indication Configuration {#atqindcfg}
+## `AT+QINDCFG` URC indication Configuration {#atqindcfg}
 
 The command is used to control URC indication.
 
