@@ -25,15 +25,24 @@ They are listed as follows:
 
 - Basic syntax
 
-  These AT commands have the format of `AT<x><n>`, or `AT&<x><n>`, where `<x>` is the command, and `<n>` is/are the argument(s) for that command.
+  These AT commands have the format of `AT<x><n>`,
+  or `AT&<x><n>`,
+  where `<x>` is the command,
+  and `<n>` is/are the argument(s)
+  for that command.
 
-  An example of this is `ATE<n>`, which tells the DCE whether received characters should be echoed back to the DTE according to the value of `<n>`.
+  An example of this is `ATE<n>`,
+  which tells the _DCE_ whether received characters
+  should be echoed back to the _DTE_ according
+  to the value of `<n>`.
 
   `<n>` is optional and a default will be used if it is missing.
 
-- S parameter syntax
+- _S_ parameter syntax
 
-  These AT commands have the format of `ATS<n>=<m>`, where `<n>` is the index of the S register to set, and `<m>` is the value to assign to it.
+  These AT commands have the format of `ATS<n>=<m>`,
+  where `<n>` is the index of the _S_ register to set,
+  and `<m>` is the value to assign to it.
 
 - Extended syntax
 
@@ -41,18 +50,34 @@ They are listed as follows:
 
   Table 1: Types of AT Commands and Responses
 
-  - Test Command: `AT+<x>=?`
+  - Test Command:
+
+    ```at
+    AT+<x>=?
+    ```
 
     This command returns the list of parameters and value ranges set by the corresponding Write Command or internal processes.
 
-  - Read Command: `AT+<x>?`
+  - Read Command:
+
+    ```at
+    AT+<x>?
+    ```
 
     This command returns the currently set value of the parameter or parameters.
 
-  - Write Command: `AT+<x>=<...>`
+  - Write Command:
+
+    ```at
+    AT+<x>=<...>
+    ```
 
     This command sets the user-definable parameter values.
 
-  - Execution Command: `AT+<x>`
+  - Execution Command:
 
-    This command reads non-variable parameters affected by internal processes in the UE.
+    ```at
+    AT+<x>
+    ```
+
+    This command reads non-variable parameters affected by internal processes in the _UE_.
