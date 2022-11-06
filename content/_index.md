@@ -1,5 +1,6 @@
 ---
 title: Introduction
+bookToC: false
 ---
 
 The **Hayes command set** (also known as the **AT command set**) is a specific command language originally developed by Dennis Hayes for the Hayes Smartmodem 300 baud modem in 1981.
@@ -52,7 +53,7 @@ They are listed as follows:
 
   - Test Command:
 
-    ```at
+    ```at-command
     AT+<x>=?
     ```
 
@@ -60,7 +61,7 @@ They are listed as follows:
 
   - Read Command:
 
-    ```at
+    ```at-command
     AT+<x>?
     ```
 
@@ -68,7 +69,7 @@ They are listed as follows:
 
   - Write Command:
 
-    ```at
+    ```at-command
     AT+<x>=<...>
     ```
 
@@ -76,7 +77,7 @@ They are listed as follows:
 
   - Execution Command:
 
-    ```at
+    ```at-command
     AT+<x>
     ```
 

@@ -24,7 +24,7 @@ The [release cause]({{< ref "at+ceer-cause" >}}) **\<text>** is a text to descri
 
   Response:
 
-  ```at
+  ```at-command
   +CEER: <text>
 
   OK // ERROR
@@ -32,7 +32,7 @@ The [release cause]({{< ref "at+ceer-cause" >}}) **\<text>** is a text to descri
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -54,7 +54,7 @@ The command is used to query and configure various settings of UE.
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "gprsattach",(list of supported <attachmode>s)
   +QCFG: "nwscanmode",(list of supported <scanmode>s),(list of supported <effect>s)
   +QCFG: "nwscanseq",(list of supported <scanseq>s),(list of supported <effect>s)
@@ -88,7 +88,7 @@ This configuration is valid only after the module is restarted.
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "gprsattach",<attachmode>
 
   OK
@@ -100,7 +100,7 @@ This configuration is valid only after the module is restarted.
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -124,7 +124,7 @@ If **\<effect>** is omitted, the configuration will take effect immediately.
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "nwscanmode",<scanmode>
 
   OK
@@ -136,7 +136,7 @@ If **\<effect>** is omitted, the configuration will take effect immediately.
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -175,7 +175,7 @@ This configuration is valid only after the module is restarted.
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "nwscanseq",<scanseq>
 
   OK
@@ -187,7 +187,7 @@ This configuration is valid only after the module is restarted.
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -217,7 +217,7 @@ If **\<effect>** is omitted, the configuration will take effect immediately.
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "roamservice",<roammode>
 
   OK
@@ -229,7 +229,7 @@ If **\<effect>** is omitted, the configuration will take effect immediately.
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -244,14 +244,6 @@ Parameter:
   255,AUTO (by default)
   ```
 
-- **\<effect>** - Number format, When to take effect
-
-  ```csv
-  Value,Meaning
-  0,Take effect after UE reboots
-  1,Take effect immediately (by default)
-  ```
-
 ### `AT+QCFG="servicedomain"` Service Domain Configuration {#atqcfg-servicedomain}
 
 The command specifies the registered service domain.
@@ -262,7 +254,7 @@ If **\<effect>** is omitted, the configuration will take effect immediately.
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "servicedomain",<service>
 
   OK
@@ -274,7 +266,7 @@ If **\<effect>** is omitted, the configuration will take effect immediately.
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -307,7 +299,7 @@ If **\<effect>** is omitted, the configuration will take effect immediately.
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "band",<bandval>,<ltebandval>,<tdsbandval>
 
   OK
@@ -319,7 +311,7 @@ If **\<effect>** is omitted, the configuration will take effect immediately.
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -398,7 +390,7 @@ This configuration is valid only after the module is restarted.
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "hsdpacat",<cat>
 
   OK
@@ -410,7 +402,7 @@ This configuration is valid only after the module is restarted.
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -440,7 +432,7 @@ This configuration is valid only after the module is restarted.
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "hsupacat",<cat>
 
   OK
@@ -452,7 +444,7 @@ This configuration is valid only after the module is restarted.
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -476,7 +468,7 @@ This configuration is valid only after the module is restarted.
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "rrc",<rrcr>
 
   OK
@@ -488,7 +480,7 @@ This configuration is valid only after the module is restarted.
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -515,7 +507,7 @@ This configuration is valid only after the module is restarted.
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "sgsn",<sgsnr>
 
   OK
@@ -527,7 +519,7 @@ This configuration is valid only after the module is restarted.
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -552,7 +544,7 @@ This configuration is valid only after the module is restarted.
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "msc",<mscr>
 
   OK
@@ -564,7 +556,7 @@ This configuration is valid only after the module is restarted.
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -589,7 +581,7 @@ The configuration will take effect immediately.
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "pdp/duplicatechk",<enable>
 
   OK
@@ -625,7 +617,7 @@ Show the RSSI value by **AT+CSQ** and get RSSI details by **AT+CSQ**.
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "tdscsq",<value>
 
   OK
@@ -637,7 +629,7 @@ Show the RSSI value by **AT+CSQ** and get RSSI details by **AT+CSQ**.
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -668,7 +660,7 @@ The sum of parameter **\<activeduration>** and **\<inactiveduration>** determine
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "urc/ri/ring",<typeri>,<pulseduration>,<activeduration>,<inactiveduration>,<ringnodisturbing>,<pulsecount>
 
   OK
@@ -678,7 +670,7 @@ The sum of parameter **\<activeduration>** and **\<inactiveduration>** determine
 
   Overloads:
 
-  ```at
+  ```at-command
   AT+QCFG="urc/ri/ring","off"
   AT+QCFG="urc/ri/ring","pulse"[,<pulseduration>[,<ringnodisturbing>]]]
   AT+QCFG="urc/ri/ring","always"
@@ -690,7 +682,7 @@ The sum of parameter **\<activeduration>** and **\<inactiveduration>** determine
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -776,7 +768,7 @@ Incoming message [URCs]({{< ref "urc" >}}) include **+CMTI**, **+CMT**, **+CDS**
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "urc/ri/smsincoming",<typeri>,<pulseduration>,<pulsecount>
 
   OK
@@ -788,7 +780,7 @@ Incoming message [URCs]({{< ref "urc" >}}) include **+CMTI**, **+CMT**, **+CDS**
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -834,7 +826,7 @@ The command specifies the RI (ring indicator) behavior when other [URCs]({{< ref
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "urc/ri/other",<typeri>,<pulseduration>,<pulsecount>
 
   OK
@@ -846,7 +838,7 @@ The command specifies the RI (ring indicator) behavior when other [URCs]({{< ref
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -886,7 +878,7 @@ The command specifies the RI (ring indicator) signal output carrier.
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "risignaltype",<risignatype>
 
   OK
@@ -898,7 +890,7 @@ The command specifies the RI (ring indicator) signal output carrier.
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -936,7 +928,7 @@ The command can delay the output of URC indication until ring indicator pulse en
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "urc/delay",<enable>
 
   OK
@@ -948,7 +940,7 @@ The command can delay the output of URC indication until ring indicator pulse en
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -976,7 +968,7 @@ The settings of the command will take effect immediately, and will be saved afte
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "urc/cache",<enable>
 
   OK
@@ -988,7 +980,7 @@ The settings of the command will take effect immediately, and will be saved afte
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -1004,7 +996,7 @@ Parameter:
 
 Example:
 
-```at
+```at-command
 AT+QCFG="urc/cache"
 +QCFG: "urc/cache",0 // Disable URC cache
 
@@ -1038,7 +1030,7 @@ The settings of the command will take effect immediately, and will be saved afte
 
   Response:
 
-  ```at
+  ```at-command
   +QCFG: "tone/incoming",<enable>
 
   OK
@@ -1050,7 +1042,7 @@ The settings of the command will take effect immediately, and will be saved afte
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 
@@ -1067,7 +1059,7 @@ Parameter:
 
 Example:
 
-```at
+```at-command
 AT+QCFG="tone/incoming"
 +QCFG: "tone/incoming",0 // Ring tone function is disabled
 
@@ -1089,7 +1081,7 @@ The command is used to control URC indication.
 
 Response:
 
-```at
+```at-command
 +QINDCFG: "all",(0,1),(0,1)
 +QINDCFG: "csq",(0,1),(0,1)
 +QINDCFG: "smsfull",(0,1),(0,1)
@@ -1105,7 +1097,7 @@ OK
 
   If **\<enable>** and **\<savetonvram>** are omitted, the current configuration will be returned:
 
-  ```at
+  ```at-command
   +QINDCFG: <urctype>,<enable>
 
   OK
@@ -1117,7 +1109,7 @@ OK
 
   If there is any error related to ME functionality:
 
-  ```at
+  ```at-command
   +CME ERROR: <err>
   ```
 

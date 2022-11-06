@@ -9,7 +9,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    RDY
    ```
 
@@ -17,7 +17,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CFUN: 1
    ```
 
@@ -25,7 +25,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CPIN: <state>
    ```
 
@@ -33,7 +33,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +QIND: SMS DONE
    ```
 
@@ -41,7 +41,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +QIND: PB DONE
    ```
 
@@ -53,7 +53,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CREG: <stat>
    ```
 
@@ -65,7 +65,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CREG: <stat>[,<lac>,<ci>[,<Act>]]
    ```
 
@@ -77,7 +77,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CGREG: <stat>
    ```
 
@@ -87,7 +87,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CGREG: <stat>[,<lac>,<ci>[,<Act>]]
    ```
 
@@ -99,7 +99,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CTZV: <tz>
    ```
 
@@ -109,7 +109,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CTZE: <tz>,<dst>,<time>
    ```
 
@@ -119,7 +119,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CMTI: <mem>,<index>
    ```
 
@@ -127,7 +127,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CMT: [<alpha>],<length><CR><LF>
    <pdu>
    ```
@@ -136,7 +136,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CMT: <oa>,[<alpha>],<scts>[,<toa>,<fo>,<pid>,<dcs>,<sca>,<tosca>,<length>]<CR><LF>
    <data>
    ```
@@ -145,7 +145,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    ^HCMT: <oa>,<scts>,<lang>, <fmt>,<length>,<prt>,<prv>,<type>,<stat><CR><LF>
    <data>
    ```
@@ -154,7 +154,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CBM: <length><CR><LF>
    <pdu>
    ```
@@ -163,7 +163,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CBM: <sn>,<mid>,<dcs>,<page>,<pages><CR><LF>
    <data>
    ```
@@ -172,7 +172,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CDS: <length><CR><LF>
    <pdu>
    ```
@@ -181,7 +181,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CDS: <fo>,<mr>,[<ra>],[<tora>],<scts>,<dt>,<st>
    ```
 
@@ -189,7 +189,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CDSI: <mem>,<index>
    ```
 
@@ -197,8 +197,8 @@ weight: 4
 
    URC Display:
 
-   ```at
-   ^HCDS: <oa>,<scts>,<lang>,<fmt>,<length>,<prt>,<prv>,<ty pe>,<stat><CR><LF><data>
+   ```at-command
+   ^HCDS: <oa>,<scts>,<lang>,<fmt>,<length>,<prt>,<prv>,<type>,<stat><CR><LF><data>
    ```
 
 ## AT+COLP
@@ -209,7 +209,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +COLP: <number>,<type>,[<subaddr>],[<satype>],[<alpha>]
    ```
 
@@ -221,7 +221,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CLIP: <number>,<type>,[subaddr],[satype],[<alpha>],<CLI validity>
    ```
 
@@ -233,7 +233,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CRING: <type>
    ```
 
@@ -245,7 +245,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CCWA: <number>,<type>,<class>[,<alpha>]
    ```
 
@@ -257,7 +257,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CSSI: <code1>
    ```
 
@@ -267,7 +267,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CSSI: <code2>
    ```
 
@@ -279,7 +279,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CUSD: <status>[,<rspstr>,[<dcs>]]
    ```
 
@@ -293,7 +293,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    POWERED DOWN
    ```
 
@@ -305,7 +305,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CGEV: REJECT <PDP_type>,<PDP_addr>
    ```
 
@@ -315,7 +315,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CGEV: NW REACT <PDP_type>,<PDP_addr>,[<cid>]
    ```
 
@@ -325,7 +325,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CGEV: NW DEACT <PDP_type>,<PDP_addr>,[<cid>]
    ```
 
@@ -335,7 +335,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CGEV: ME DEACT <PDP_type>,<PDP_addr>,[<cid>]
    ```
 
@@ -345,7 +345,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CGEV: NW DETACH
    ```
 
@@ -355,7 +355,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CGEV: ME DETACH
    ```
 
@@ -365,7 +365,7 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CGEV: NW CLASS <class>
    ```
 
@@ -375,6 +375,6 @@ weight: 4
 
    URC Display:
 
-   ```at
+   ```at-command
    +CGEV: ME CLASS <class>
    ```

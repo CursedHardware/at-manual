@@ -48,7 +48,7 @@ The command determines the flow control behavior of the serial port.
 
   Response:
 
-  ```at
+  ```at-command
   +IFC: (list of supported <dce_by_dte>s),(list of supported <dte_by_dce>s)
 
   OK
@@ -58,7 +58,7 @@ The command determines the flow control behavior of the serial port.
 
   Response:
 
-  ```at
+  ```at-command
   +IFC: <dce_by_dte>,<dte_by_dce>
 
   OK
@@ -96,7 +96,7 @@ Flow control is only applicable for data mode.
 
 Example:
 
-```at
+```at-command
 AT+IFC=2,2 // Open the hardware flow control
 OK
 AT+IFC?
@@ -113,7 +113,7 @@ The command determines the serial interface character framing format and parity 
 
   Response:
 
-  ```at
+  ```at-command
   +ICF: (list of supported <format>s),(list of supported <parity>s)
 
   OK
@@ -123,13 +123,13 @@ The command determines the serial interface character framing format and parity 
 
   Response:
 
-  ```at
+  ```at-command
   +ICF: <format>,<parity>
 
   OK
   ```
 
-- Write Command: `AT+ICF=[<format>,[<parity>]]`
+- Write Command: `AT+ICF=<format>,[<parity>]`
 
   This parameter setting determines the serial interface character framing format and parity received by TA from TE.
 
@@ -165,7 +165,7 @@ The setting of **\<rate>** will not be restored with AT&F.
 
   Response:
 
-  ```at
+  ```at-command
   +IPR: (list of supported auto detectable <rate>s),(list of supported fixed-only <rate>s)
 
   OK
@@ -175,7 +175,7 @@ The setting of **\<rate>** will not be restored with AT&F.
 
   Response:
 
-  ```at
+  ```at-command
   +IPR: <rate>
 
   OK
@@ -209,7 +209,7 @@ Parameter:
 
 Example:
 
-```at
+```at-command
 AT+IPR=115200 // Set fixed baud rate to 115200bps.
 OK
 AT&W // Store current setting, that is, the serial communication speed is 115200bps after restarting module

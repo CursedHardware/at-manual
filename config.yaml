@@ -7,3 +7,6 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+  highlight:
+    lexers:
+      - assets/at-command-lexer.xml

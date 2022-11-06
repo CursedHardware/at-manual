@@ -1,0 +1,109 @@
+<lexer>
+  <config>
+    <name>AT Command</name>
+    <alias>at-command</alias>
+  </config>
+  <rules>
+    <state name="whitespace">
+      <rule pattern="\s+">
+        <token type="TextWhitespace" />
+      </rule>
+    </state>
+    <state name="comments">
+      <rule pattern="//.*$">
+        <token type="Comment" />
+      </rule>
+    </state>
+    <state name="variable">
+      <rule pattern="&lt;[^&gt;]+&gt;">
+        <token type="NameLabel" />
+      </rule>
+    </state>
+    <state name="command-specific">
+      <rule pattern="^A/">
+        <token type="NameFunction" />
+      </rule>
+      <rule pattern="&amp;\S">
+        <token type="NameFunction" />
+      </rule>
+    </state>
+    <state name="command-general">
+      <rule pattern="^AT\+([A-Z]+)">
+        <token type="NameFunction" />
+        <push />
+      </rule>
+      <rule pattern="^AT[A-Z](\d+)?">
+        <token type="NameFunction" />
+        <push />
+      </rule>
+      <rule pattern="^AT">
+        <token type="NameFunction" />
+        <push />
+      </rule>
+    </state>
+    <state name="compete">
+      <rule pattern="^(RDY|OK|ERROR|CONNECT|RING|BUSY|NO (CARRIER|DIALTONE|ANSWER))">
+        <token type="Keyword" />
+        <push />
+      </rule>
+    </state>
+    <state name="literal">
+      <rule pattern="[0-9]+">
+        <token type="LiteralNumberInteger" />
+      </rule>
+      <rule pattern="&#34;(\\\\|\\&#34;|[^&#34;])*&#34;">
+        <token type="LiteralStringDouble" />
+      </rule>
+      <rule pattern="\(list of supported \S+\)">
+        <token type="Text" />
+        <push />
+      </rule>
+      <rule pattern="\(">
+        <token type="Punctuation" />
+        <push />
+      </rule>
+      <rule pattern="\)">
+        <token type="Punctuation" />
+        <push />
+      </rule>
+    </state>
+    <state name="urc">
+      <rule pattern="^([\^\+][^:]+:)">
+        <token type="Keyword" />
+        <push />
+      </rule>
+    </state>
+    <state name="root">
+      <rule>
+        <include state="whitespace" />
+      </rule>
+      <rule>
+        <include state="comments" />
+      </rule>
+      <rule>
+        <include state="compete" />
+      </rule>
+      <rule>
+        <include state="urc" />
+      </rule>
+      <rule>
+        <include state="variable" />
+      </rule>
+      <rule>
+        <include state="literal" />
+      </rule>
+      <rule>
+        <include state="command-specific" />
+      </rule>
+      <rule>
+        <include state="command-general" />
+      </rule>
+      <rule pattern="[&quot;,;=\?\[\]]">
+        <token type="Operator" />
+      </rule>
+      <rule pattern=".+">
+        <token type="Text" />
+      </rule>
+    </state>
+  </rules>
+</lexer>
