@@ -17,7 +17,7 @@ The command requests the International Mobile Subscriber Identity (IMSI) which i
 
   Response:
 
-  ```at-command
+  ```at
   <IMSI>
 
   OK
@@ -25,7 +25,7 @@ The command requests the International Mobile Subscriber Identity (IMSI) which i
 
   If there is any error related to ME functionality:
 
-  ```at-command
+  ```at
   +CME ERROR: <err>
   ```
 
@@ -35,7 +35,7 @@ Parameter:
 
 Example:
 
-```at-command
+```at
 AT+CIMI
 460023210226023 // Query IMSI number of (U)SIM which is attached to ME
 
@@ -56,7 +56,7 @@ The factory default password of **PF**, **PN**, **PU**, **PP** and **PC** lock i
 
   Response:
 
-  ```at-command
+  ```at
   +CLCK: (list of supported <fac>s)
 
   OK
@@ -76,7 +76,7 @@ The factory default password of **PF**, **PN**, **PU**, **PP** and **PC** lock i
 
   Response:
 
-  ```at-command
+  ```at
   OK
   ```
 
@@ -84,7 +84,7 @@ The factory default password of **PF**, **PN**, **PU**, **PP** and **PC** lock i
 
   Response:
 
-  ```at-command
+  ```at
   +CLCK: <status>[,<class>]
   +CLCK: <status>[,<class>]
   ...
@@ -193,7 +193,7 @@ Parameter:
 
 Example:
 
-```at-command
+```at
 AT+CLCK="SC",2        // Query the status of (U)SIM card
 +CLCK: 0              // The (U)SIM card is unlocked (OFF)
 
@@ -227,7 +227,7 @@ The password may be **(U)SIM PIN**, **(U)SIM PUK**, **PH-SIM PIN**, etc.
 
   Response:
 
-  ```at-command
+  ```at
   +CPIN: <code>
 
   OK
@@ -279,7 +279,7 @@ Parameter:
 
 Example:
 
-```at-command
+```at
 AT+CPIN?        // Queried PIN code is locked
 +CPIN: SIM PIN
 
@@ -318,7 +318,7 @@ The command sets a new password for the facility lock function defined by **AT+C
 
   Response:
 
-  ```at-command
+  ```at
   +CPWD: (list of supported <fac>s),(<pwdlength>s)
 
   OK
@@ -380,7 +380,7 @@ Parameter:
 
 Example:
 
-```at-command
+```at
 AT+CPIN?
 +CPIN: READY
 
@@ -413,7 +413,7 @@ The TE shall then keep the processing of (U)SIM information within the frame spe
 
   Response:
 
-  ```at-command
+  ```at
   +CSIM: <length>,<response>
 
   OK // or ERROR
@@ -421,7 +421,7 @@ The TE shall then keep the processing of (U)SIM information within the frame spe
 
   If there is any error related to ME functionality:
 
-  ```at-command
+  ```at
   +CME ERROR: <err>
   ```
 
@@ -459,7 +459,7 @@ It transmits the (U)SIM command number **\<command>** and its required parameter
 
   Response:
 
-  ```at-command
+  ```at
   +CRSM: <sw1>,<sw2>[,<response>]
 
   OK // ERROR
@@ -467,7 +467,7 @@ It transmits the (U)SIM command number **\<command>** and its required parameter
 
   If there is any error related to ME functionality:
 
-  ```at-command
+  ```at
   +CME ERROR: <err>
   ```
 

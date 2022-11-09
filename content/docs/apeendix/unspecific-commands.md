@@ -13,7 +13,7 @@ _build:
 
   Response:
 
-  ```at-command
+  ```at
   +EGMR: (list of supported <mode>s),(list of supported <format>s)
 
   OK
@@ -23,7 +23,7 @@ _build:
 
   Response:
 
-  ```at-command
+  ```at
   +EGMR: <mode>,<format>,<data>
 
   OK
@@ -48,7 +48,7 @@ Name,Value,Meaning
 
 Example:
 
-```at-command
+```at
 AT+GSN
 +GSN: "111111111111111"
 

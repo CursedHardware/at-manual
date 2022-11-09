@@ -11,7 +11,7 @@ The command is used to configure the output port of URC.
 
   Response:
 
-  ```at-command
+  ```at
   +QURCCFG: "urcport",("usbat","usbmodem","uart1")
 
   OK
@@ -23,7 +23,7 @@ The command is used to configure the output port of URC.
 
   Resposne:
 
-  ```at-command
+  ```at
   +QURCCFG: "urcport",<urcportvalue>
 
   OK

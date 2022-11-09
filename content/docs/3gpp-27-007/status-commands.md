@@ -9,7 +9,7 @@ weight: 2
 
   Response:
 
-  ```at-command
+  ```at
   +CPAS: (list of supported <pas>s)
 
   OK
@@ -21,7 +21,7 @@ weight: 2
 
   Response:
 
-  ```at-command
+  ```at
   +CPAS: <pas>
 
   OK // or ERROR
@@ -29,7 +29,7 @@ weight: 2
 
   If there is any error related to ME functionality:
 
-  ```at-command
+  ```at
   +CME ERROR: <err>
   ```
 
@@ -44,7 +44,7 @@ Name,Value,Meaning
 
 Example:
 
-```at-command
+```at
 AT+CPAS
 +CPAS: 0 // The module is idle
 

@@ -17,7 +17,7 @@ The command controls the functionality level. It can also be used to reset the U
 
   Response:
 
-  ```at-command
+  ```at
   +CFUN: (list of supported <fun>s),(list of supported <rst>s)
 
   OK
@@ -27,7 +27,7 @@ The command controls the functionality level. It can also be used to reset the U
 
   Response:
 
-  ```at-command
+  ```at
   +CFUN: <fun>
 
   OK
@@ -41,7 +41,7 @@ The command controls the functionality level. It can also be used to reset the U
 
 Example:
 
-```at-command
+```at
 AT+CFUN=0
 OK
 AT+COPS?
@@ -81,7 +81,7 @@ error numbers or verbose messages as **+CME ERROR: \<err>** and **+CMS ERROR: \<
 
   Response:
 
-  ```at-command
+  ```at
   +CMEE: (list of supported <n>s)
 
   OK
@@ -91,7 +91,7 @@ error numbers or verbose messages as **+CME ERROR: \<err>** and **+CMS ERROR: \<
 
   Resposne:
 
-  ```at-command
+  ```at
   +CMEE: <n>
 
   OK
@@ -113,7 +113,7 @@ error numbers or verbose messages as **+CME ERROR: \<err>** and **+CMS ERROR: \<
 
 Example:
 
-```at-command
+```at
 AT+CMEE=0
 OK
 AT+CPIN?
@@ -139,7 +139,7 @@ This enables the UE to convert character strings correctly between TE and UE cha
 
   Response:
 
-  ```at-command
+  ```at
   +CSCS: (list of supported <chset>s)
 
   OK
@@ -149,7 +149,7 @@ This enables the UE to convert character strings correctly between TE and UE cha
 
   Response:
 
-  ```at-command
+  ```at
   +CSCS: <chset>
 
   OK
@@ -170,7 +170,7 @@ This enables the UE to convert character strings correctly between TE and UE cha
 
 Example:
 
-```at-command
+```at
 AT+CSCS?
 +CSCS: "GSM"
 

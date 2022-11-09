@@ -15,7 +15,7 @@ The command returns the ICCID (Integrated Circuit Card Identifier) number of the
 
   Response:
 
-  ```at-command
+  ```at
   +QCCID: <iccid>
 
   OK // ERROR
@@ -27,7 +27,7 @@ Parameter:
 
 Example:
 
-```at-command
+```at
 AT+QCCID // Query ICCID of the (U)SIM card
 +QCCID: 89860025128306012474
 
@@ -42,7 +42,7 @@ The command can query the number of attempts left to enter the password of (U)SI
 
   Response:
 
-  ```at-command
+  ```at
   +QPINC: ("SC","P2")
 
   OK
@@ -52,7 +52,7 @@ The command can query the number of attempts left to enter the password of (U)SI
 
   Response:
 
-  ```at-command
+  ```at
   +QPINC: "SC",<pincounter>,<pukcounter>
   +QPINC: "P2",<pincounter>,<pukcounter>
 
@@ -63,7 +63,7 @@ The command can query the number of attempts left to enter the password of (U)SI
 
   Response:
 
-  ```at-command
+  ```at
   +QPINC: <facility>,<pincounter>,<pukcounter>
 
   OK // ERROR
@@ -71,7 +71,7 @@ The command can query the number of attempts left to enter the password of (U)SI
 
   If there is any error related to ME functionality:
 
-  ```at-command
+  ```at
   +CME ERROR: <err>
   ```
 
@@ -94,7 +94,7 @@ The command is used to query the initialization status of (U)SIM card.
 
   Response:
 
-  ```at-command
+  ```at
   +QINISTAT: (0-7)
 
   OK
@@ -104,7 +104,7 @@ The command is used to query the initialization status of (U)SIM card.
 
   Response:
 
-  ```at-command
+  ```at
   +QINISTAT: <status>
 
   OK
@@ -143,7 +143,7 @@ The level of (U)SIM card detection pin should also be set when the (U)SIM card i
 
   Response:
 
-  ```at-command
+  ```at
   +QSIMDET: (0,1),(0,1)
 
   OK
@@ -153,7 +153,7 @@ The level of (U)SIM card detection pin should also be set when the (U)SIM card i
 
   Response:
 
-  ```at-command
+  ```at
   +QSIMDET: <enable>,<insertlevel>
 
   OK
@@ -169,7 +169,7 @@ Parameter:
 
   ```csv
   Value,Meaning
-  0,Disable (U)SIM card detection (by default)
+  0,Disable (U)SIM card detection (By default)
   1,Enable (U)SIM card detection
   ```
 
@@ -177,13 +177,13 @@ Parameter:
 
   ```csv
   Value,Meaning
-  0,Low level (by default)
+  0,Low level (By default)
   1,High level
   ```
 
 Example:
 
-```at-command
+```at
 // Set (U)SIM card detection pin level as low when (U)SIM card is inserted
 AT+QSIMDET=1,0
 OK
@@ -203,7 +203,7 @@ The configuration of this command can be saved by **AT&W**.
 
   Response:
 
-  ```at-command
+  ```at
   +QSIMSTAT: (0,1)
 
   OK
@@ -213,7 +213,7 @@ The configuration of this command can be saved by **AT&W**.
 
   Response:
 
-  ```at-command
+  ```at
   +QSIMSTAT: <enable>,<insertedstatus>
 
   OK
@@ -232,7 +232,7 @@ Parameter:
 
   ```csv
   Value,Meaning
-  0,Disable (U)SIM card insertion status report (by default)
+  0,Disable (U)SIM card insertion status report (By default)
   1,Enable (U)SIM card insertion status report
   ```
 
@@ -249,7 +249,7 @@ Parameter:
 
 Example:
 
-```at-command
+```at
 AT+QSIMSTAT? // Query (U)SIM card insertion status
 +QSIMSTAT: 0,1
 

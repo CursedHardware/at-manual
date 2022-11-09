@@ -53,7 +53,7 @@ They are listed as follows:
 
   - Test Command:
 
-    ```at-command
+    ```at
     AT+<x>=?
     ```
 
@@ -61,7 +61,7 @@ They are listed as follows:
 
   - Read Command:
 
-    ```at-command
+    ```at
     AT+<x>?
     ```
 
@@ -69,7 +69,7 @@ They are listed as follows:
 
   - Write Command:
 
-    ```at-command
+    ```at
     AT+<x>=<...>
     ```
 
@@ -77,7 +77,7 @@ They are listed as follows:
 
   - Execution Command:
 
-    ```at-command
+    ```at
     AT+<x>
     ```
 
