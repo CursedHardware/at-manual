@@ -3,6 +3,10 @@ languageCode: en-US
 title: AT Command Reference Manual
 theme: hugo-book
 
+disablePathToLower: true
+enableGitInfo: true
+disableKinds: [taxonomy, taxonomyTerm]
+
 params:
   BookRepo: https://github.com/M2MGateway/at-manual
   BookEditPath: edit/main
