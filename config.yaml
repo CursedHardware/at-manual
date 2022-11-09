@@ -3,6 +3,10 @@ languageCode: en-US
 title: AT Command Reference Manual
 theme: hugo-book
 
+params:
+  BookRepo: https://github.com/M2MGateway/at-manual
+  BookEditPath: edit/main
+
 markup:
   goldmark:
     renderer:
