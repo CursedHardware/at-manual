@@ -1,6 +1,7 @@
 ---
 title: Unspecific Commands
 weight: 1000
+bookHidden: true
 ---
 
 ## `AT+EGMR` Modem Revision {#ategmr}
