@@ -2,8 +2,6 @@
 title: GNSS Commands
 ---
 
-## Introduction
-
 GNSS engine is high-performance and suitable for various applications which lowest-cost and accurate positioning are needed.
 
 Meanwhile, it can also support position tracking without network assistance, and GNSS capabilities when GSM/WCDMA is out of network coverage areas.
@@ -17,7 +15,7 @@ GNSS can be applied in the following occasions:
 - homing
 - fleet management
 
-### How to Use GNSS
+## How to Use GNSS
 
 GNSS engine allows calculating location without any assistance from the network.
 
@@ -42,7 +40,7 @@ The procedure of turning on GNSS is shown as below:
      the engine will stop automatically;
      in the process you can use the command **AT+QGPSEND** to end the session.
 
-### NMEA Sentences Type
+## NMEA Sentences Type
 
 The NMEA sentences are compatible with [NMEA-0183](https://en.wikipedia.org/wiki/NMEA_0183) protocol, and all of the standard NMEA sentences have two kinds of prefix.
 
@@ -60,7 +58,7 @@ And for GLONASS sentences, the prefixes are "GL" and "GN", as below:
 - GNGSA - Overall satellite data
 - GNGNS - Positioning System
 
-### Introduction of _gpsOneXTRA_
+## Introduction of _gpsOneXTRA_
 
 _gpsOneXTRA_ assistance enhances standalone performance, and simplifies GNSS assistance delivery to GNSS engine, including ephemeris, almanac, ionosphere, UTC, health and coarse time assistance.
 
@@ -93,11 +91,11 @@ The working procedure of _gpsOneXTRA_ is shown as follows:
 - Step 5: Inject the downloaded _xtra.bin_ or _xtra2.bin_ file by **AT+QGPSXTRADATA**.
 - Step 6: Others steps see [How to Use GNSS](#how-to-use-gnss).
 
-### GNSS Power Saving Management {#low-power}
+## GNSS Power Saving Management {#low-power}
 
 GNSS engine provides power saving solutions by DPO and ODP, thus extending battery life, maximizing talk and standby time, and enhancing accuracy and TTFF.
 
-#### DPO (Dynamic Power Optimization) {#dpo}
+### DPO (Dynamic Power Optimization) {#dpo}
 
 DPO (Dynamic Power Optimization) is a power-saving solution which attempts to turn off GNSS RF and other unneeded components.
 
@@ -127,7 +125,7 @@ Benefits and impacts of DPO:
 
 - TTFF and yield will not be impacted.
 
-#### ODP (On-Demand Positioning) {#odp}
+### ODP (On-Demand Positioning) {#odp}
 
 When On-Demand Positioning (ODP) is enabled, standalone GNSS positioning will be triggered in the background.
 
@@ -167,221 +165,3 @@ Configure **\<odpcontrol>** to set two different modes by **AT+QGPSCFG**:
 - GNSS engine will start 1 Hz positioning session.
 - Main goal is to keep GNSS engine ready so that when the application demands a position from the
   GNSS engine, position can be reported quickly.
-
-## Description of AT Commands {#at-commands}
-
-### `AT+QGPSCFG` Configure GNSS
-
-### `AT+QGPSDEL` Delete Assistance Data
-
-### `AT+QGPS` Operate GPS Session
-
-### `AT+QGPSEND` Terminate GNSS Session
-
-### `AT+QGPSLOC` Obtain Position
-
-### `AT+QGPSGNMEA` Obtain NMEA Sentences
-
-### `AT+QGPSXTRA` Enable gpsOneXTRA Functionality
-
-### `AT+QGPSXTRATIME` InjectgpsOneXTRATime
-
-### `AT+QGPSXTRADATA` Inject gpsOneXTRA Data Manually
-
-This command can be used to inject gpsOneXTRA data to GNSS engine.
-
-Before using it, you must turn off the GNSS engine and enable XTRA by **AT+QGPSXTRA**.
-
-Meanwhile, before injecting gpsOneXTRA data, gpsOneXTRA time must be injected first by **AT+QGPSXTRATIME**.
-
-Before operating **AT+QGPSXTRADATA** command, you should store the valid gpsOneXTRA data into RAM or UFS of the mudule (recommended to save it to RAM).
-
-After operating this command successfully, gpsOneXTRA data can be deleted.
-
-At this moment, you can query the validity of gpsOneXTRA data by **AT+QGPSXTRADATA?**.
-
-- Test Command: `AT+QGPSXTRADATA=?`
-
-  Response:
-
-  ```at
-  +QGPSXTRADATA: <xtradatafilename>
-
-  OK
-  ```
-
-- Read Command: `AT+QGPSXTRADATA?`
-
-  Query the validity of the current gpsOneXTRA data
-
-  Response:
-
-  ```at
-  +QGPSXTRADATA: <xtradatadurtime>,<injecteddatatime>
-
-  OK
-  ```
-
-  If error is related to ME functionality:
-
-  ```at
-  +CME ERROR: <errcode>
-  ```
-
-- Execution Command: `AT+QGPSXTRADATA=<xtradatafilename>`
-
-  Inject gpsOneXTRA data manually
-
-  Response:
-
-  ```at
-  OK
-  ```
-
-  If error is related to ME functionality:
-
-  ```at
-  +CME ERROR: <errcode>
-  ```
-
-Parameter:
-
-- **\<xtradatafilename>** - Filename of gpsOneXTRA data file, e.g: "xtra.bin" or "xtra2.bin"
-
-- **\<xtradatadurtime>** - Valid time of injected gpsOneXTRA data, unit: minute.
-
-  ```csv
-  Value,Meaning
-  0,No gpsOneXTRA file or gpsOneXTRA file is overdue
-  1 - 10080,Valid time of gpsOneXTRA file
-  ```
-
-- **\<injecteddatatime>** - Starting time of the valid time of XTRA data
-
-  Format: `yyyy/MM/dd,hh:mm:ss`, e.g: `2015/01/03,15:34:50`
-
-- **\<errcode>** - Integer type, indicates the error code of the operation.
-
-  If it is not 0, it is the type of error.
-
-  Please refer to the [Summary of Error Codes]({{< ref "#error-codes" >}})
-
-### `+QGPSURC` Expired XTRA Data (URC)
-
-```at
-// XTRA data is expired, and need to be updated.
-+QGPSURC: "xtradataexpire",<xtradatadurtime>,<injecteddatatime>
-```
-
-Parameter:
-
-- **\<xtradatadurtime>** - Valid time of injected XTRA data
-
-  unit: minute.
-
-  special value: `0`, No XTRA file or XTRA file is expired
-
-- **\<injecteddatatime>** - Starting time of the valid time of XTRA data
-
-  Format: `yyyy/MM/dd,hh:mm:ss`, e.g: `2015/01/03,15:34:50`
-
-## Example
-
-### Turn On and Off the GNSS Engine {#gnss-power}
-
-The example uses default arguments to start GNSS engine,
-after turning on GNSS engine,
-NMEA sentences will be outputted from "usbnmea" port by default.
-
-```at
-AT+QGPS=1 // Turn on GNSS engine. OK
-// After turning on GNSS engine, NMEA sentences will be outputted from "usbnmea" port by default.
-AT+QGPSLOC? // Obtain position information.
-+QGPSLOC: 061951.0,3150.7223N,11711.9293E,0.7,62.2,2,0.0,0.0,0.0,110513,09
-
-OK
-AT+QGPSEND // Turn off GNSS engine.
-OK
-```
-
-### Application of GNSS nmeasrc {#nmeasrc}
-
-When GNSS was started, you can turn on **\<nmeasrc>** feature, and obtain NMEA sentences by **AT+QGPSGNMEA** directly.
-
-```at
-AT+QGPSCFG="nmeasrc",1 // Enable nmeasrc functionality.
-OK
-AT+QGPSGNMEA="GGA" // Obtain GGA sentence.
-+QGPSGNMEA: $GPGGA,103647.0,3150.721154,N,11711.925873,E,1,02,4.7,59.8,M,-2.0,M,,*77
-
-OK
-AT+QGPSCFG="nmeasrc",0 // Disable nmeasrc functionality.
-OK
-AT+QGPSGNMEA="GGA" // Disable nmeasrc functionality, GGA sentence can’t be obtained.
-+CME ERROR: 507
-```
-
-### Example of Injecting gpsOneXTRA
-
-You must enable gpsOneXTRA before injecting gpsOneXTRA time and data to GNSS engine.
-
-In this example we manually download the XTRA file, then upload to UFS via **AT+QGPSXTRAUPL**.
-
-```at
-// If gpsOneXTRA is disabled, enable it by AT+QGPSXTRA and reset EC20, then perform the following procedures.
-AT+QGPSXTRA=1 // Enable XTRA. OK
-// Restart EC20, enable gpsOneXTRA of GNSS engine.
-// If gpsOneXTRA data is invalid (query by AT+QGPSXTRADATA?), then perform the following procedures.
-// You can download XTRA file to PC from this URL <http://xtra1.gpsonextra.net/xtra2.bin> or other URL (Refer to the Chapter 1.3).
-AT+QFUPL="RAM:xtra2.bin",59748,60
-<Select file & send it in QCOM>
-OK
-// <utc> format is YYYY/MM/DD,hh:mm:ss, e.g. 2015/01/03,15:30:30.
-AT+QGPSXTRATIME=0,"2015/01/03,15:30:30",1,1,5 // Inject gpsOneXTRA time to GNSS engine. OK
-AT+QGPSXTRADATA="RAM:xtra2.bin" // Inject gpsOneXTRA data to GNSS engine successfully.
-OK
-AT+QFDEL="RAM:xtra2.bin" // Delete XTRA data file from RAM file
-OK
-AT+QGPS=1 // Turn on GNSS engine
-OK
-```
-
-## Appendix A: Terms and Abbreviations
-
-```csv
-Abbreviation,Description
-GNSS,Global Navigation Satellite Systems
-GPS,Global Positioning System provides by USA
-GLONASS,Global Navigation Satellite System provides by Russia
-NMEA,National Marine Electronics Association
-gpsOneXTRA,An auxiliary positioning technology provides by Qualcomm
-DPO,Dynamic Power Optimization
-ODP,On-Demand Positioning
-```
-
-## Appendix B: Summary of Error Codes {#error-codes}
-
-The error code **\<errcode>** indicates an error related to GNSS operations.
-
-The detail about **\<errcode>** is described in the following table.
-
-```csv
-Error Code,Meaning
-501,Invalid parameter(s)
-502,Operation not supported
-503,GNSS subsystem busy
-504,Session is ongoing
-505,Session not activity
-506,Operation timeout
-507,Function not enabled
-508,Time information error
-509,XTRA not enabled
-510,XTRA file open failed
-511,Bad CRC for XTRA data file
-512,Validity time is out of range
-513,Internal resource error
-514,GNSS locked
-515,End by E911
-516,Not fixed now
-549,Unknown error
-```
