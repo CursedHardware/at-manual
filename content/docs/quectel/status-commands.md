@@ -3,6 +3,9 @@ title: Status Control Commands
 weight: 3
 ---
 
+<!-- cspell:enableCompoundWords -->
+<!-- cspell:words signal attach -->
+
 ## `AT+CEER` Extended Error Report {#atceer}
 
 The command is used to query an extended error and report the cause of the last failed operation, such as:
@@ -106,7 +109,7 @@ This configuration is valid only after the module is restarted.
 
 Parameter:
 
-- **\<attachmode>** - Number format, the mode to attach GRPS when UE is powered on
+- **\<attachmode>** - Number format, the mode to attach GPRS when UE is powered on
 
   ```csv
   Value,Meaning

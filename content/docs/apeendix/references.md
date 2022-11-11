@@ -15,6 +15,8 @@ Document Name,Remark
 
 ## Terms and Abbreviations {#terms}
 
+<!-- cspell:disable -->
+
 ```csv
 Abbreviation,Description
 AMR,Adaptive Multi-Rate CSD Circuit Switch Data

@@ -16,6 +16,8 @@ Neither **ERROR** nor **OK** result code shall be returned.
 
 Different Coding Schemes of **+CMS ERROR: \<err>**:
 
+<!-- cspell:disable -->
+
 ```csv
 Code,Meaning
 300,ME failure

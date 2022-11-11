@@ -14,11 +14,13 @@ Neither **ERROR** nor **OK** result code shall be returned.
 
 **\<err>** values are mostly used by common message commands.
 
-The following table lists most of general and GRPS related **ERROR** codes.
+The following table lists most of general and GPRS related **ERROR** codes.
 
 For some GSM protocol failure cause described in GSM specifications, the corresponding **ERROR** codes are not included.
 
 Different Coding Schemes of **+CME ERROR: \<err>**:
+
+<!-- cspell:disable -->
 
 ```csv
 Code,Meaning

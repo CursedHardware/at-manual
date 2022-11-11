@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://github.com/streetsidesoftware/cspell/raw/main/cspell.schema.json
+dictionaries:
+  - en-US
+  - softwareTerms
+  - m2m-words
+dictionaryDefinitions:
+  - name: m2m-words
+    path: .cspell/m2m-words.txt
+ignoreRegExpList:
+  - /\<\S+>/
+  - /AT\+\S+/
+  - /{#\S+}/
+  - /\+\S+/
+  - ^\S+
+  - '"\S+#\S+"'

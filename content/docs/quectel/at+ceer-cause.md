@@ -4,6 +4,8 @@ _build:
   list: false
 ---
 
+<!-- cspell:disable -->
+
 ## CS Internal Cause
 
 ```plain

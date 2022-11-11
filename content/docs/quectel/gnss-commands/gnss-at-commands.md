@@ -3,6 +3,8 @@ title: AT Commands
 weight: 1
 ---
 
+<!-- cSpell:enableCompoundWords -->
+
 ## `AT+QGPSCFG` Configure GNSS
 
 ## `AT+QGPSDEL` Delete Assistance Data
@@ -103,7 +105,7 @@ Before using it, you must turn off the GNSS engine and enable XTRA by **AT+QGPSX
 
 Meanwhile, before injecting gpsOneXTRA data, gpsOneXTRA time must be injected first by **AT+QGPSXTRATIME**.
 
-Before operating **AT+QGPSXTRADATA** command, you should store the valid gpsOneXTRA data into RAM or UFS of the mudule (recommended to save it to RAM).
+Before operating **AT+QGPSXTRADATA** command, you should store the valid gpsOneXTRA data into RAM or UFS of the module (recommended to save it to RAM).
 
 After operating this command successfully, gpsOneXTRA data can be deleted.
 

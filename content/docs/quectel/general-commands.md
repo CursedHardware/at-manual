@@ -3,6 +3,9 @@ title: General Commands
 weight: 1
 ---
 
+<!-- cspell:enableCompoundWords -->
+<!-- cspell:words urc port -->
+
 ## `AT+QURCCFG` (Configure URC Indication Option)
 
 The command is used to configure the output port of URC.

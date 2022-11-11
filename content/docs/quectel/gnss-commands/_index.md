@@ -29,7 +29,7 @@ The procedure of turning on GNSS is shown as below:
   1. NMEA sentences output to `"usbnmea"` port by default, you can read the port to obtain NMEA sentences.
   1. You can use **AT+QGPSLOC** to obtain some positioning information directly,
      such as latitude, longitude, height, time and positioning type and soon.
-  1. After enabling **\<nmeasrc>** by **AT+QGPSCFG**, you can acquire the specificed NMEA sentence by **AT+QGPSGNMEA**.
+  1. After enabling **\<nmeasrc>** by **AT+QGPSCFG**, you can acquire the specified NMEA sentence by **AT+QGPSGNMEA**.
      If **\<nmeasrc>** is disabled, this command cannot be used.
 
 - Step 4: You can terminate GNSS by two-ways:

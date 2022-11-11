@@ -3,6 +3,8 @@ title: (U)SIM Related Commands
 weight: 3
 ---
 
+<!-- cspell:ignore BAIC BAOC BOIC FSIM NETSUB -->
+
 ## `AT+CIMI` Request IMSI {#atcimi}
 
 The command requests the International Mobile Subscriber Identity (IMSI) which is intended to permit the TE to identify the individual SIM card or active application in the UICC (GSM or USIM) that is attached to MT.

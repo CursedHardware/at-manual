@@ -4,6 +4,8 @@ slug: example
 weight: 3
 ---
 
+<!-- cspell:ignore usbnmea nmeasrc GPSGA -->
+
 ## Turn On and Off the GNSS Engine {#gnss-power}
 
 The example uses default arguments to start GNSS engine,

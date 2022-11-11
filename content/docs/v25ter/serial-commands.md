@@ -3,6 +3,8 @@ title: Serial Interface Control Commands
 weight: 2
 ---
 
+<!-- cspell:words UE -->
+
 ## `AT&C` Set DCD Function Mode {#atc}
 
 The command controls the behavior of the UE's DCD (data carrier detection) line.

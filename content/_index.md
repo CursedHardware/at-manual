@@ -3,7 +3,7 @@ title: Introduction
 bookToC: false
 ---
 
-The **Hayes command set** (also known as the **AT command set**) is a specific command language originally developed by Dennis Hayes for the Hayes Smartmodem 300 baud modem in 1981.
+The **Hayes command set** (also known as the **AT command set**) is a specific command language originally developed by Dennis Hayes for the Hayes SmartModem 300 baud modem in 1981.
 
 - <https://en.wikipedia.org/wiki/Hayes_command_set>
 - <https://en.wikipedia.org/wiki/Voice_modem_command_set>

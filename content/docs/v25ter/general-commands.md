@@ -3,6 +3,8 @@ title: General Commands
 weight: 1
 ---
 
+<!-- cspell:words CEFDR DIALTONE ategmr -->
+
 ## `ATI` Display Product Identification Information {#ati}
 
 The command delivers a product information text.
