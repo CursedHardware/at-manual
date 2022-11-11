@@ -26,6 +26,8 @@ jobs:
         with:
           hugo-version: latest
           extended: true
+      - name: Spellcheck
+        run: npx cspell lint "content/**/*.md"
       - name: Build
         run: hugo --minify
       - name: Upload artifact

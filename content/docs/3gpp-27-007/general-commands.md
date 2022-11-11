@@ -89,7 +89,7 @@ error numbers or verbose messages as **+CME ERROR: \<err>** and **+CMS ERROR: \<
 
 - Read Command: `AT+CMEE?`
 
-  Resposne:
+  Response:
 
   ```at
   +CMEE: <n>

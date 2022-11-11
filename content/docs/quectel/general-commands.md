@@ -21,7 +21,7 @@ The command is used to configure the output port of URC.
 
   If the configuration parameter `<urcportvalue>` is omitted, return current configuration:
 
-  Resposne:
+  Response:
 
   ```at
   +QURCCFG: "urcport",<urcportvalue>
@@ -31,7 +31,7 @@ The command is used to configure the output port of URC.
 
   If the configuration parameter `<urcportvalue>` is not omitted, response:
 
-  Resposne: `OK` or `ERROR`
+  Response: `OK` or `ERROR`
 
 Parameter:
 

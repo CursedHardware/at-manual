@@ -1,0 +1,4 @@
+{
+  "$schema": "https://github.com/streetsidesoftware/cspell/raw/main/cspell.schema.json",
+  "dictionaries": ["en-US", "softwareTerms"]
+}

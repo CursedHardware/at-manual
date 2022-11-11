@@ -152,9 +152,9 @@ Requests to determine the GNSS position are immediately returned while this mode
 
 The battery will be greatly impacted in this mode.
 
-Maintenance of position and time uncertainty also improves the performance of E911 on UMTS.
+Maintenance of position and time uncertainty also improves the performance of [E911](https://en.wikipedia.org/wiki/E911) on [UMTS](https://en.wikipedia.org/wiki/UMTS).
 
-Configure **\<odpcontrol>** to set two different modes by AT+QGPSCFG:
+Configure **\<odpcontrol>** to set two different modes by **AT+QGPSCFG**:
 
 **Low power mode**:
 
@@ -170,26 +170,128 @@ Configure **\<odpcontrol>** to set two different modes by AT+QGPSCFG:
 
 ## Description of AT Commands {#at-commands}
 
-<!--
-2 Description of AT Command
-2.1. AT+QGPSCFG Configure GNSS
-2.2. AT+QGPSDEL Delete Assistance Data
-2.3. AT+QGPS Operate GPS Session
-2.4. AT+QGPSEND Terminate GNSS Session
-2.5. AT+QGPSLOC Obtain Position
-2.6. AT+QGPSGNMEA Obtain NMEA Sentences
-2.7. AT+QGPSXTRA Enable gpsOneXTRA Functionality
-2.8. AT+QGPSXTRATIME InjectgpsOneXTRATime
-2.9. AT+QGPSXTRADATA Inject gpsOneXTRA Data Manually
-2.10. Introduction of URC
-2.10.1. Expired XTRA Data
--->
+### `AT+QGPSCFG` Configure GNSS
+
+### `AT+QGPSDEL` Delete Assistance Data
+
+### `AT+QGPS` Operate GPS Session
+
+### `AT+QGPSEND` Terminate GNSS Session
+
+### `AT+QGPSLOC` Obtain Position
+
+### `AT+QGPSGNMEA` Obtain NMEA Sentences
+
+### `AT+QGPSXTRA` Enable gpsOneXTRA Functionality
+
+### `AT+QGPSXTRATIME` InjectgpsOneXTRATime
+
+### `AT+QGPSXTRADATA` Inject gpsOneXTRA Data Manually
+
+This command can be used to inject gpsOneXTRA data to GNSS engine.
+
+Before using it, you must turn off the GNSS engine and enable XTRA by **AT+QGPSXTRA**.
+
+Meanwhile, before injecting gpsOneXTRA data, gpsOneXTRA time must be injected first by **AT+QGPSXTRATIME**.
+
+Before operating **AT+QGPSXTRADATA** command, you should store the valid gpsOneXTRA data into RAM or UFS of the mudule (recommended to save it to RAM).
+
+After operating this command successfully, gpsOneXTRA data can be deleted.
+
+At this moment, you can query the validity of gpsOneXTRA data by **AT+QGPSXTRADATA?**.
+
+- Test Command: `AT+QGPSXTRADATA=?`
+
+  Response:
+
+  ```at
+  +QGPSXTRADATA: <xtradatafilename>
+
+  OK
+  ```
+
+- Read Command: `AT+QGPSXTRADATA?`
+
+  Query the validity of the current gpsOneXTRA data
+
+  Response:
+
+  ```at
+  +QGPSXTRADATA: <xtradatadurtime>,<injecteddatatime>
+
+  OK
+  ```
+
+  If error is related to ME functionality:
+
+  ```at
+  +CME ERROR: <errcode>
+  ```
+
+- Execution Command: `AT+QGPSXTRADATA=<xtradatafilename>`
+
+  Inject gpsOneXTRA data manually
+
+  Response:
+
+  ```at
+  OK
+  ```
+
+  If error is related to ME functionality:
+
+  ```at
+  +CME ERROR: <errcode>
+  ```
+
+Parameter:
+
+- **\<xtradatafilename>** - Filename of gpsOneXTRA data file, e.g: "xtra.bin" or "xtra2.bin"
+
+- **\<xtradatadurtime>** - Valid time of injected gpsOneXTRA data, unit: minute.
+
+  ```csv
+  Value,Meaning
+  0,No gpsOneXTRA file or gpsOneXTRA file is overdue
+  1 - 10080,Valid time of gpsOneXTRA file
+  ```
+
+- **\<injecteddatatime>** - Starting time of the valid time of XTRA data
+
+  Format: `yyyy/MM/dd,hh:mm:ss`, e.g: `2015/01/03,15:34:50`
+
+- **\<errcode>** - Integer type, indicates the error code of the operation.
+
+  If it is not 0, it is the type of error.
+
+  Please refer to the [Summary of Error Codes]({{< ref "#error-codes" >}})
+
+### `+QGPSURC` Expired XTRA Data (URC)
+
+```at
+// XTRA data is expired, and need to be updated.
++QGPSURC: "xtradataexpire",<xtradatadurtime>,<injecteddatatime>
+```
+
+Parameter:
+
+- **\<xtradatadurtime>** - Valid time of injected XTRA data
+
+  unit: minute.
+
+  special value: `0`, No XTRA file or XTRA file is expired
+
+- **\<injecteddatatime>** - Starting time of the valid time of XTRA data
+
+  Format: `yyyy/MM/dd,hh:mm:ss`, e.g: `2015/01/03,15:34:50`
 
 ## Example
 
 ### Turn On and Off the GNSS Engine {#gnss-power}
 
-The example uses default arguments to start GNSS engine, after turning on GNSS engine, NMEA sentences will be outputted from "usbnmea" port by default.
+The example uses default arguments to start GNSS engine,
+after turning on GNSS engine,
+NMEA sentences will be outputted from "usbnmea" port by default.
 
 ```at
 AT+QGPS=1 // Turn on GNSS engine. OK

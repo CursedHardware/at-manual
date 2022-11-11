@@ -180,7 +180,7 @@ Parameter:
   7,All telephony except SMS (Default)
   8,Short message service
   16,Data circuit synchronization
-  32,Data circuit asynchronization
+  32,Data circuit asynchronous
   ```
 
 - **\<status>** - Status
