@@ -1,0 +1,7 @@
+Quectel
+SIMCOM
+RSSI
+ICCID
+GNSS
+NMEA
+XTRA
