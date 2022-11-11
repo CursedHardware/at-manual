@@ -3,6 +3,8 @@ title: (U)SIM Related Commands
 weight: 4
 ---
 
+<!-- cspell:words Phonebook CPIN -->
+
 ## `AT+QCCID` Show ICCID {#atqccid}
 
 The command returns the ICCID (Integrated Circuit Card Identifier) number of the (U)SIM card.

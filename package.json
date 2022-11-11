@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "start": "hugo serve",
+    "lint": "npx cspell lint 'content/**/*.md'",
+    "build": "hugo"
+  }
+}

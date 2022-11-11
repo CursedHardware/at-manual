@@ -4,7 +4,7 @@ weight: 3
 ---
 
 <!-- cspell:enableCompoundWords -->
-<!-- cspell:words signal attach -->
+<!-- cspell:words signal attach SGSN -->
 
 ## `AT+CEER` Extended Error Report {#atceer}
 
@@ -308,7 +308,7 @@ If **\<effect>** is omitted, the configuration will take effect immediately.
   OK
   ```
 
-- Write Command: `AT+QCFG="band",<bandval>,<lteban dval>,<tdsbandval>[,<effect>]`
+- Write Command: `AT+QCFG="band",<bandval>,<ltebandval>,<tdsbandval>[,<effect>]`
 
   Response: `OK` or `ERROR`
 
@@ -1094,7 +1094,7 @@ Response:
 OK
 ```
 
-- Write Command: `AT+QINDCFG=<urctype>[,<enable>[,< savetonvram>]]`
+- Write Command: `AT+QINDCFG=<urctype>[,<enable>[,<savetonvram>]]`
 
   Response:
 

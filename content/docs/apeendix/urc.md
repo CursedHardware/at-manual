@@ -3,6 +3,8 @@ title: Summary of URC
 weight: 4
 ---
 
+<!-- cspell:words Phonebook DEACT -->
+
 ## Unconditional
 
 1. ME initialization is successful

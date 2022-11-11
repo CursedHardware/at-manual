@@ -4,7 +4,7 @@ slug: example
 weight: 3
 ---
 
-<!-- cspell:ignore usbnmea nmeasrc GPSGA -->
+<!-- cspell:words usbnmea nmeasrc GPGGA -->
 
 ## Turn On and Off the GNSS Engine {#gnss-power}
 

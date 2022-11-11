@@ -2,6 +2,8 @@
 title: GNSS Commands
 ---
 
+<!-- cspell:words GLGSV GNGNS GNGSA GPGGA GPGSA GPGSV GPRMC GPVTG HEPE SBAS TTFF usbnmea -->
+
 GNSS engine is high-performance and suitable for various applications which lowest-cost and accurate positioning are needed.
 
 Meanwhile, it can also support position tracking without network assistance, and GNSS capabilities when GSM/WCDMA is out of network coverage areas.

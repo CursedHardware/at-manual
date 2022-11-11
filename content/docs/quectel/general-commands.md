@@ -44,7 +44,7 @@ Name,Meaning
 ```
 
 ```csv
-urcportvalue,Meaning
+,Meaning
 "usbat",USB AT port
 "usbmodem",USB modem port
 "uart1",Main UART
