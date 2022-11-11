@@ -822,7 +822,7 @@ Parameter:
 
 The command specifies the RI (ring indicator) behavior when other [URCs]({{< ref "urc" >}}) are presented.
 
-- Read Commmand: `AT+QCFG="urc/ri/other"`
+- Read Command: `AT+QCFG="urc/ri/other"`
 
   Response:
 
@@ -874,7 +874,7 @@ Parameter:
 
 The command specifies the RI (ring indicator) signal output carrier.
 
-- Read Commmand: `AT+QCFG="risignaltype"`
+- Read Command: `AT+QCFG="risignaltype"`
 
   Response:
 
@@ -924,7 +924,7 @@ Parameter:
 
 The command can delay the output of URC indication until ring indicator pulse ends.
 
-- Read Commmand: `AT+QCFG="urc/delay"`
+- Read Command: `AT+QCFG="urc/delay"`
 
   Response:
 
@@ -964,7 +964,7 @@ The settings of the command will take effect immediately, and will be saved afte
 
 {{< /hint >}}
 
-- Read Commmand: `AT+QCFG="urc/cache"`
+- Read Command: `AT+QCFG="urc/cache"`
 
   Response:
 
@@ -1026,7 +1026,7 @@ The settings of the command will take effect immediately, and will be saved afte
 
 {{< /hint >}}
 
-- Read Commmand: `AT+QCFG="tone/incoming"`
+- Read Command: `AT+QCFG="tone/incoming"`
 
   Response:
 
