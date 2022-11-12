@@ -2,7 +2,7 @@
 title: GNSS Commands
 ---
 
-<!-- cspell:words GLGSV GNGNS GNGSA GPGGA GPGSA GPGSV GPRMC GPVTG HEPE SBAS TTFF usbnmea -->
+<!-- cspell:words HEPE SBAS TTFF -->
 
 GNSS engine is high-performance and suitable for various applications which lowest-cost and accurate positioning are needed.
 
@@ -46,6 +46,8 @@ The procedure of turning on GNSS is shown as below:
 
 The NMEA sentences are compatible with [NMEA-0183](https://en.wikipedia.org/wiki/NMEA_0183) protocol, and all of the standard NMEA sentences have two kinds of prefix.
 
+<!-- cspell:disable -->
+
 for GPS sentences, the prefix is "GP", as below:
 
 - GPGGA - Global Positioning System Fix Data, Time, Position and related fix data
@@ -59,6 +61,8 @@ And for GLONASS sentences, the prefixes are "GL" and "GN", as below:
 - GLGSV - Detailed satellite data
 - GNGSA - Overall satellite data
 - GNGNS - Positioning System
+
+<!-- cspell:enable -->
 
 ## Introduction of _gpsOneXTRA_
 

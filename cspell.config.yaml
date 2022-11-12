@@ -1,4 +1,5 @@
 # yaml-language-server: $schema=https://github.com/streetsidesoftware/cspell/raw/main/cspell.schema.json
+allowCompoundWords: true
 dictionaries:
   - en-US
   - softwareTerms

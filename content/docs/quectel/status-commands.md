@@ -3,8 +3,7 @@ title: Status Control Commands
 weight: 3
 ---
 
-<!-- cspell:enableCompoundWords -->
-<!-- cspell:words signal attach SGSN -->
+<!-- cspell:words SGSN -->
 
 ## `AT+CEER` Extended Error Report {#atceer}
 

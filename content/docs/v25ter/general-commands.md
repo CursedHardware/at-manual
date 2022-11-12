@@ -3,7 +3,7 @@ title: General Commands
 weight: 1
 ---
 
-<!-- cspell:words CEFDR DIALTONE ategmr -->
+<!-- cspell:words EC20CEFDR01A01M4G -->
 
 ## `ATI` Display Product Identification Information {#ati}
 

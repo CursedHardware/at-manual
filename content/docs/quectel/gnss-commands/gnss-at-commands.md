@@ -3,8 +3,6 @@ title: AT Commands
 weight: 1
 ---
 
-<!-- cSpell:enableCompoundWords -->
-
 ## `AT+QGPSCFG` Configure GNSS
 
 ## `AT+QGPSDEL` Delete Assistance Data
