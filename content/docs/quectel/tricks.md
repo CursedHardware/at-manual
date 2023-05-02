@@ -26,7 +26,7 @@ AT+QNWLOCK="common/lte",2,earfcn,pci,0 # Lock Cell
 AT+QCFG="usbnet",0 # RMNET, QMI
 AT+QCFG="usbnet",1 # ECM
 AT+QCFG="usbnet",2 # MBIM
-AT+QCFG="usbnet",3 # RNDIS
+AT+QCFG="usbnet",3 # rNDIS
 ```
 
 ## Modify IMEI
