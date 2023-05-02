@@ -1,0 +1,5 @@
+Quectel
+Huawei
+SIMCOM
+Fibocom
+Sierra

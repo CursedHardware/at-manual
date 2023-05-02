@@ -3,10 +3,19 @@ allowCompoundWords: true
 dictionaries:
   - en-US
   - softwareTerms
+  - m2m-brands
+  - m2m-sim
   - m2m-words
+  - m2m-gnss
 dictionaryDefinitions:
+  - name: m2m-brands
+    path: .cspell/brands.txt
+  - name: m2m-sim
+    path: .cspell/sim.txt
   - name: m2m-words
-    path: .cspell/m2m-words.txt
+    path: .cspell/words.txt
+  - name: m2m-gnss
+    path: .cspell/gnss.txt
 ignoreRegExpList:
   - /\<\S+>/
   - /AT\+\S+/
