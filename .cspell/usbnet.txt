@@ -1,0 +1,4 @@
+MBIM
+NDIS
+QMI
+RMNET

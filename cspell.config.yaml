@@ -5,6 +5,8 @@ dictionaries:
   - softwareTerms
   - m2m-brands
   - m2m-sim
+  - m2m-3gpp
+  - m2m-usbnet
   - m2m-words
   - m2m-gnss
 dictionaryDefinitions:
@@ -12,6 +14,10 @@ dictionaryDefinitions:
     path: .cspell/brands.txt
   - name: m2m-sim
     path: .cspell/sim.txt
+  - name: m2m-3gpp
+    path: .cspell/3gpp.txt
+  - name: m2m-usbnet
+    path: .cspell/usbnet.txt
   - name: m2m-words
     path: .cspell/words.txt
   - name: m2m-gnss
